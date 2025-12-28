@@ -13,7 +13,7 @@ export const Design3Bold = ({ onSelect }: Design3Props) => {
   return (
     <div className="min-h-screen design-bold bg-background">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
         <div className="container mx-auto px-6 py-6 flex items-center justify-between">
           <div className="flex items-center gap-4">
             <TreeLogo className="w-12 h-14 text-primary" />
