@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { TreeLogo } from "@/components/TreeLogo";
-import { Calendar, MapPin, Clock, ArrowRight, Users, Heart, Send, Play } from "lucide-react";
+import { MapPin, ArrowRight, Users, Heart, Send, Play, Video } from "lucide-react";
 import heroWarm from "@/assets/hero-warm.jpg";
 
 interface Design2Props {
@@ -54,14 +54,14 @@ export const Design2Warm = ({ onSelect }: Design2Props) => {
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-2xl space-y-8 animate-fade-up">
             <p className="font-body text-sm tracking-[0.3em] uppercase text-primary font-medium">
-              Pentecostal · Filipino · Spirit-Filled
+              Non-Denominational · Bible-Based · Church-Planting
             </p>
             <h1 className="font-elegant text-5xl md:text-7xl font-medium text-foreground leading-[1.1]">
-              Sama-sama sa<br />
-              <span className="italic text-primary">Pananampalataya</span>
+              Welcome to the<br />
+              <span className="italic text-primary">JFCM Dubai Family</span>
             </h1>
             <p className="font-body text-lg text-muted-foreground max-w-lg leading-relaxed">
-              A warm, Spirit-filled home for Filipino overseas workers in Dubai and Ras Al Khaimah. Experience powerful worship, kababayan fellowship, and grow deeper in Christ.
+              A non-profit, bible-based, church-planting organization. We honor no one else but the Lord Jesus Christ. Serving expatriate communities in the UAE since 1987.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button variant="warm" className="text-base px-8 py-6">
@@ -69,8 +69,8 @@ export const Design2Warm = ({ onSelect }: Design2Props) => {
                 <ArrowRight className="w-5 h-5" />
               </Button>
               <Button variant="warmOutline" className="text-base px-8 py-6">
-                <Play className="w-5 h-5" />
-                Watch Sunday Service
+                <Video className="w-5 h-5" />
+                Join via Zoom
               </Button>
             </div>
           </div>
@@ -79,21 +79,29 @@ export const Design2Warm = ({ onSelect }: Design2Props) => {
         {/* Service Info Card */}
         <div className="absolute bottom-12 right-12 hidden lg:block animate-fade-up" style={{ animationDelay: "0.4s" }}>
           <div className="bg-card/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl max-w-sm border border-border">
-            <h3 className="font-elegant text-2xl font-medium text-foreground mb-4">Samahan Ninyo Kami</h3>
+            <h3 className="font-elegant text-2xl font-medium text-foreground mb-4">Join Us in Worship</h3>
             <div className="space-y-3 mb-6">
-              <div className="flex items-center gap-3 text-muted-foreground">
-                <MapPin className="w-5 h-5 text-primary" />
-                <span className="font-body">Dubai, UAE</span>
-              </div>
-              <div className="flex items-center gap-3 text-muted-foreground">
-                <MapPin className="w-5 h-5 text-primary" />
-                <span className="font-body">Ras Al Khaimah, UAE</span>
-              </div>
+              {["Dubai", "Ras Al Khaimah", "Abu Dhabi", "Al Ain"].map((location) => (
+                <div key={location} className="flex items-center gap-3 text-muted-foreground">
+                  <MapPin className="w-5 h-5 text-primary" />
+                  <span className="font-body">{location}, UAE</span>
+                </div>
+              ))}
             </div>
             <Button variant="warm" className="w-full">
               Get Directions
             </Button>
           </div>
+        </div>
+      </section>
+
+      {/* Scripture Section */}
+      <section className="py-16 bg-primary/5">
+        <div className="container mx-auto px-6 text-center">
+          <p className="font-elegant text-xl md:text-2xl italic text-foreground max-w-4xl mx-auto leading-relaxed">
+            "Therefore go and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit, and teaching them to obey everything I have commanded you."
+          </p>
+          <p className="font-body text-sm text-muted-foreground mt-4">— Matthew 28:19-20</p>
         </div>
       </section>
 
@@ -103,7 +111,10 @@ export const Design2Warm = ({ onSelect }: Design2Props) => {
           <div className="text-center mb-16">
             <p className="font-body text-sm tracking-[0.2em] uppercase text-primary mb-4">TO WIN · TO TRAIN · TO SEND</p>
             <h2 className="font-elegant text-4xl md:text-5xl font-medium text-foreground mb-6">Rooted in Purpose</h2>
-            <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+            <p className="font-body text-muted-foreground max-w-2xl mx-auto">
+              Founded in June 1987 in Riyadh, Saudi Arabia. Now serving within Dubai's religious tolerance, fulfilling the Great Commission.
+            </p>
+            <div className="w-24 h-1 bg-primary mx-auto rounded-full mt-6"></div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-10">
@@ -112,19 +123,19 @@ export const Design2Warm = ({ onSelect }: Design2Props) => {
                 icon: Heart, 
                 number: "01", 
                 title: "Win", 
-                desc: "Reaching Filipino OFWs and their families with the transforming power of the Holy Spirit and the love of Jesus Christ." 
+                desc: "Reaching expatriate communities, particularly Filipinos, with the transforming power of the Gospel and fulfilling the Great Commission." 
               },
               { 
                 icon: Users, 
                 number: "02", 
                 title: "Train", 
-                desc: "Nurturing spiritual growth through Spirit-led discipleship, bilingual worship, and genuine kababayan fellowship." 
+                desc: "Nurturing spiritual growth through discipleship, Bible study, and genuine fellowship—teaching them to obey everything Christ commanded." 
               },
               { 
                 icon: Send, 
                 number: "03", 
                 title: "Send", 
-                desc: "Commissioning OFWs as ambassadors of Christ to their workplaces across the UAE and back home to the Philippines." 
+                desc: "Commissioning believers as ambassadors of Christ to their workplaces across the UAE and to the ends of the earth." 
               }
             ].map((item, i) => (
               <div 
@@ -156,17 +167,21 @@ export const Design2Warm = ({ onSelect }: Design2Props) => {
               <div className="p-12 lg:p-16 flex flex-col justify-center">
                 <TreeLogo className="w-16 h-20 mb-8 text-primary-foreground opacity-80" />
                 <h2 className="font-elegant text-4xl md:text-5xl font-medium text-primary-foreground mb-6">
-                  Maligayang Pagdating<br />sa Aming Pamilya
+                  Seek First<br />His Kingdom
                 </h2>
-                <p className="font-body text-primary-foreground/80 text-lg mb-8 leading-relaxed">
-                  Whether you're new to Dubai or Ras Al Khaimah, seeking a Spirit-filled church, or looking for kababayan fellowship, you belong here.
+                <p className="font-body text-primary-foreground/80 text-lg mb-4 leading-relaxed">
+                  "But seek first his kingdom and his righteousness, and all these things will be given to you as well." — Matthew 6:33
+                </p>
+                <p className="font-body text-primary-foreground/70 mb-8">
+                  Join us in-person at any of our UAE locations or participate online via Zoom.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button variant="heroLight">
                     Plan Your Visit
                   </Button>
                   <Button variant="ghost" className="text-primary-foreground hover:bg-primary-foreground/10">
-                    Contact Us
+                    <Video className="w-5 h-5" />
+                    Join Online
                   </Button>
                 </div>
               </div>
@@ -191,6 +206,7 @@ export const Design2Warm = ({ onSelect }: Design2Props) => {
               <div>
                 <p className="font-elegant text-2xl">Jesus First Christian Ministries</p>
                 <p className="font-body text-sm opacity-60 tracking-widest">TO WIN · TO TRAIN · TO SEND</p>
+                <p className="font-body text-xs opacity-40 mt-1">Established 1987 · Riyadh, Saudi Arabia</p>
               </div>
             </div>
             <div className="flex items-center gap-8 font-body text-sm">

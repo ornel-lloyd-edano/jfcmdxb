@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { TreeLogo } from "@/components/TreeLogo";
-import { Calendar, MapPin, Clock, ArrowRight, Users, Heart, Send } from "lucide-react";
+import { MapPin, ArrowRight, Users, Heart, Send, Video } from "lucide-react";
 import heroSerene from "@/assets/hero-serene.jpg";
 
 interface Design1Props {
@@ -46,14 +46,14 @@ export const Design1Serene = ({ onSelect }: Design1Props) => {
             <div className="space-y-8 animate-fade-up">
               <div className="inline-flex items-center gap-2 bg-secondary px-4 py-2 rounded-full">
                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
-                <span className="font-body text-sm text-muted-foreground">A Pentecostal Church for Filipinos in the UAE</span>
+                <span className="font-body text-sm text-muted-foreground">Non-Denominational · Bible-Based · Church-Planting</span>
               </div>
               <h1 className="font-display text-5xl md:text-7xl font-bold text-foreground leading-tight">
-                Your Home <br />
-                <span className="text-primary">Away From Home</span>
+                Welcome to the <br />
+                <span className="text-primary">JFCM Dubai Family</span>
               </h1>
               <p className="font-body text-lg text-muted-foreground max-w-md leading-relaxed">
-                A Spirit-filled Filipino community in Dubai and Ras Al Khaimah. Experience powerful worship, genuine kababayan fellowship, and grow deeper in your faith journey.
+                A non-profit, bible-based, church-planting organization. We honor no one else but the Lord Jesus Christ. Founded in 1987 in Riyadh, Saudi Arabia.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button variant="hero">
@@ -61,7 +61,8 @@ export const Design1Serene = ({ onSelect }: Design1Props) => {
                   <ArrowRight className="w-5 h-5" />
                 </Button>
                 <Button variant="heroOutline">
-                  Watch Online
+                  <Video className="w-5 h-5" />
+                  Join via Zoom
                 </Button>
               </div>
               {/* Mission Statement */}
@@ -87,7 +88,7 @@ export const Design1Serene = ({ onSelect }: Design1Props) => {
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="font-body text-sm text-muted-foreground">Sunday Worship Service</p>
-                    <p className="font-display text-xl font-semibold text-foreground">Dubai & Ras Al Khaimah</p>
+                    <p className="font-display text-xl font-semibold text-foreground">In-Person & Online</p>
                   </div>
                   <Button variant="default" size="sm">
                     Find Location
@@ -99,20 +100,30 @@ export const Design1Serene = ({ onSelect }: Design1Props) => {
         </div>
       </section>
 
+      {/* Scripture Section */}
+      <section className="py-16 bg-primary/5">
+        <div className="container mx-auto px-6 text-center">
+          <p className="font-body text-lg md:text-xl italic text-foreground max-w-3xl mx-auto">
+            "But seek first his kingdom and his righteousness, and all these things will be given to you as well."
+          </p>
+          <p className="font-body text-sm text-muted-foreground mt-4">— Matthew 6:33</p>
+        </div>
+      </section>
+
       {/* Values Section */}
       <section className="py-20 bg-secondary/50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="font-display text-4xl font-bold text-foreground mb-4">Our Mission</h2>
             <p className="font-body text-muted-foreground max-w-2xl mx-auto">
-              Serving the Filipino OFW community in the UAE with Spirit-filled worship, biblical teaching, and genuine fellowship.
+              Fulfilling the Great Commission within Dubai's religious tolerance, serving expatriate communities with the love of Christ.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { icon: Heart, title: "Win", desc: "Reaching Filipino overseas workers and families with the transforming power of the Gospel and the love of Christ." },
-              { icon: Users, title: "Train", desc: "Discipling believers through Spirit-led Bible study, Tagalog and English worship, and mentorship programs." },
-              { icon: Send, title: "Send", desc: "Equipping OFWs to be ambassadors of Christ in their workplaces and communities across the UAE and beyond." }
+              { icon: Heart, title: "Win", desc: "Reaching expatriate communities with the transforming power of the Gospel and the love of Christ, fulfilling the Great Commission." },
+              { icon: Users, title: "Train", desc: "Discipling believers through Bible study, worship, and mentorship—making disciples of all nations as commanded in Matthew 28:19-20." },
+              { icon: Send, title: "Send", desc: "Equipping believers to be ambassadors of Christ in their workplaces and communities across the UAE and beyond." }
             ].map((item, i) => (
               <div 
                 key={item.title}
@@ -135,21 +146,28 @@ export const Design1Serene = ({ onSelect }: Design1Props) => {
         <div className="container mx-auto">
           <div className="bg-primary rounded-3xl p-12 text-center text-primary-foreground">
             <TreeLogo className="w-16 h-20 mx-auto mb-6 text-primary-foreground opacity-80" />
-            <h2 className="font-display text-4xl font-bold mb-8">Join Us This Sunday</h2>
-            <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-8">
-              <div className="flex items-center gap-3">
-                <MapPin className="w-6 h-6" />
-                <span className="font-body text-lg">Dubai</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <MapPin className="w-6 h-6" />
-                <span className="font-body text-lg">Ras Al Khaimah</span>
-              </div>
+            <h2 className="font-display text-4xl font-bold mb-4">Join Us This Sunday</h2>
+            <p className="font-body text-primary-foreground/80 mb-8 max-w-xl mx-auto">
+              Physical attendance and online participation via Zoom available for those who can't attend in person.
+            </p>
+            <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-8 flex-wrap">
+              {["Dubai", "Ras Al Khaimah", "Abu Dhabi", "Al Ain"].map((location) => (
+                <div key={location} className="flex items-center gap-3">
+                  <MapPin className="w-5 h-5" />
+                  <span className="font-body text-lg">{location}</span>
+                </div>
+              ))}
             </div>
-            <Button variant="heroLight">
-              Plan Your Visit
-              <ArrowRight className="w-5 h-5" />
-            </Button>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Button variant="heroLight">
+                Plan Your Visit
+                <ArrowRight className="w-5 h-5" />
+              </Button>
+              <Button variant="ghost" className="text-primary-foreground hover:bg-primary-foreground/10">
+                <Video className="w-5 h-5" />
+                Join Online
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -159,7 +177,8 @@ export const Design1Serene = ({ onSelect }: Design1Props) => {
         <div className="container mx-auto text-center">
           <TreeLogo className="w-12 h-14 mx-auto mb-4 text-primary-foreground" />
           <p className="font-display text-xl mb-2">Jesus First Christian Ministries</p>
-          <p className="font-body text-sm opacity-70 mb-6">TO WIN. TO TRAIN. TO SEND.</p>
+          <p className="font-body text-sm opacity-70 mb-2">TO WIN. TO TRAIN. TO SEND.</p>
+          <p className="font-body text-xs opacity-50 mb-6">Established 1987 · Riyadh, Saudi Arabia</p>
           <div className="flex items-center justify-center gap-6 text-sm font-body opacity-70">
             {navItems.map((item) => (
               <a key={item} href="#" className="hover:opacity-100 transition-opacity">{item}</a>
