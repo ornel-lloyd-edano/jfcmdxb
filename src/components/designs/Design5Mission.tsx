@@ -55,7 +55,7 @@ export const Design5Mission = ({ onSelect }: Design5Props) => {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 px-4 py-2 rounded-full">
               <Globe className="w-4 h-4 text-accent" />
-              <span className="font-mission-body text-sm text-foreground font-medium">Purpose-Driven · Global · Outward-Focused</span>
+              <span className="font-mission-body text-sm text-foreground font-medium">Non-Denominational · Bible-Based · Church-Planting</span>
             </div>
             
             <h1 className="font-mission text-5xl md:text-7xl font-extrabold text-foreground leading-[1.05] tracking-tight">
