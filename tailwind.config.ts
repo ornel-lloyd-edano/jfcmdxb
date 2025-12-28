@@ -69,7 +69,7 @@ export default {
       fontFamily: {
         display: ["Cormorant Garamond", "serif"],
         body: ["Inter", "sans-serif"],
-        elegant: ["Playfair Display", "serif"],
+        elegant: ["Lora", "serif"],
         sacred: ["Libre Baskerville", "serif"],
         "sacred-display": ["Cinzel", "serif"],
         "sacred-body": ["Source Serif 4", "serif"],
