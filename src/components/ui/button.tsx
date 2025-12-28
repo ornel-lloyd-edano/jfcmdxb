@@ -24,6 +24,12 @@ const buttonVariants = cva(
         warmOutline: "border-2 border-primary text-primary hover:bg-primary/10 rounded-lg px-6 py-3",
         bold: "bg-primary text-primary-foreground hover:brightness-110 rounded-none px-8 py-4 font-bold uppercase tracking-widest shadow-lg",
         boldOutline: "border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-none px-8 py-4 font-bold uppercase tracking-widest",
+        // Sacred & Liturgical variants
+        sacred: "bg-primary text-primary-foreground hover:bg-primary/90 rounded-sm px-6 py-3 font-medium tracking-wide shadow-md border border-accent/20",
+        sacredOutline: "border border-primary text-primary hover:bg-primary/10 rounded-sm px-6 py-3 font-medium tracking-wide",
+        // Mission & Movement variants
+        mission: "bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg px-6 py-3 font-bold tracking-tight shadow-md",
+        missionOutline: "border-2 border-primary text-primary hover:bg-primary/10 rounded-lg px-6 py-3 font-bold tracking-tight",
       },
       size: {
         default: "h-10 px-4 py-2",

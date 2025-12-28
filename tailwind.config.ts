@@ -70,6 +70,11 @@ export default {
         display: ["Cormorant Garamond", "serif"],
         body: ["Inter", "sans-serif"],
         elegant: ["Playfair Display", "serif"],
+        sacred: ["Libre Baskerville", "serif"],
+        "sacred-display": ["Cinzel", "serif"],
+        "sacred-body": ["Source Serif 4", "serif"],
+        mission: ["Montserrat", "sans-serif"],
+        "mission-body": ["IBM Plex Sans", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",
