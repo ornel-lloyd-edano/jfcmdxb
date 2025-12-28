@@ -54,14 +54,14 @@ export const Design2Warm = ({ onSelect }: Design2Props) => {
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-2xl space-y-8 animate-fade-up">
             <p className="font-body text-sm tracking-[0.3em] uppercase text-primary font-medium">
-              TO WIN · TO TRAIN · TO SEND
+              Pentecostal · Filipino · Spirit-Filled
             </p>
             <h1 className="font-elegant text-5xl md:text-7xl font-medium text-foreground leading-[1.1]">
-              Growing Together<br />
-              <span className="italic text-primary">in Faith & Love</span>
+              Sama-sama sa<br />
+              <span className="italic text-primary">Pananampalataya</span>
             </h1>
             <p className="font-body text-lg text-muted-foreground max-w-lg leading-relaxed">
-              Join our family at Jesus First Christian Ministries, where every person matters and every story is valued. Experience genuine community and transformative worship.
+              A warm, Spirit-filled home for Filipino overseas workers in Dubai and Ras Al Khaimah. Experience powerful worship, kababayan fellowship, and grow deeper in Christ.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button variant="warm" className="text-base px-8 py-6">
@@ -79,15 +79,15 @@ export const Design2Warm = ({ onSelect }: Design2Props) => {
         {/* Service Info Card */}
         <div className="absolute bottom-12 right-12 hidden lg:block animate-fade-up" style={{ animationDelay: "0.4s" }}>
           <div className="bg-card/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl max-w-sm border border-border">
-            <h3 className="font-elegant text-2xl font-medium text-foreground mb-4">Join Us Sunday</h3>
+            <h3 className="font-elegant text-2xl font-medium text-foreground mb-4">Samahan Ninyo Kami</h3>
             <div className="space-y-3 mb-6">
               <div className="flex items-center gap-3 text-muted-foreground">
-                <Clock className="w-5 h-5 text-primary" />
-                <span className="font-body">9:00 AM & 11:00 AM</span>
+                <MapPin className="w-5 h-5 text-primary" />
+                <span className="font-body">Dubai, UAE</span>
               </div>
               <div className="flex items-center gap-3 text-muted-foreground">
                 <MapPin className="w-5 h-5 text-primary" />
-                <span className="font-body">123 Faith Avenue</span>
+                <span className="font-body">Ras Al Khaimah, UAE</span>
               </div>
             </div>
             <Button variant="warm" className="w-full">
@@ -101,7 +101,7 @@ export const Design2Warm = ({ onSelect }: Design2Props) => {
       <section className="py-24 bg-secondary/30">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <p className="font-body text-sm tracking-[0.2em] uppercase text-primary mb-4">Our Calling</p>
+            <p className="font-body text-sm tracking-[0.2em] uppercase text-primary mb-4">TO WIN · TO TRAIN · TO SEND</p>
             <h2 className="font-elegant text-4xl md:text-5xl font-medium text-foreground mb-6">Rooted in Purpose</h2>
             <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
           </div>
@@ -112,19 +112,19 @@ export const Design2Warm = ({ onSelect }: Design2Props) => {
                 icon: Heart, 
                 number: "01", 
                 title: "Win", 
-                desc: "We share the transformative love of Jesus, reaching hearts through compassion and genuine care for every person we encounter." 
+                desc: "Reaching Filipino OFWs and their families with the transforming power of the Holy Spirit and the love of Jesus Christ." 
               },
               { 
                 icon: Users, 
                 number: "02", 
                 title: "Train", 
-                desc: "We nurture spiritual growth through intentional discipleship, equipping believers with the tools to live out their faith daily." 
+                desc: "Nurturing spiritual growth through Spirit-led discipleship, bilingual worship, and genuine kababayan fellowship." 
               },
               { 
                 icon: Send, 
                 number: "03", 
                 title: "Send", 
-                desc: "We commission and support individuals to carry God's message into their homes, workplaces, and communities around the world." 
+                desc: "Commissioning OFWs as ambassadors of Christ to their workplaces across the UAE and back home to the Philippines." 
               }
             ].map((item, i) => (
               <div 
@@ -156,10 +156,10 @@ export const Design2Warm = ({ onSelect }: Design2Props) => {
               <div className="p-12 lg:p-16 flex flex-col justify-center">
                 <TreeLogo className="w-16 h-20 mb-8 text-primary-foreground opacity-80" />
                 <h2 className="font-elegant text-4xl md:text-5xl font-medium text-primary-foreground mb-6">
-                  Find Your Place<br />in Our Family
+                  Maligayang Pagdating<br />sa Aming Pamilya
                 </h2>
                 <p className="font-body text-primary-foreground/80 text-lg mb-8 leading-relaxed">
-                  Whether you're exploring faith for the first time or looking for a church to call home, we'd love to welcome you.
+                  Whether you're new to Dubai or Ras Al Khaimah, seeking a Spirit-filled church, or looking for kababayan fellowship, you belong here.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button variant="heroLight">
