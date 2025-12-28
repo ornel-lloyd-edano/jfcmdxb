@@ -22,7 +22,7 @@ export const Design4Sacred = ({ onSelect }: Design4Props) => {
               <span className="block text-xs text-muted-foreground font-sacred-body tracking-widest uppercase">Christian Ministries</span>
             </div>
           </div>
-          <div className="hidden lg:flex items-center gap-10">
+          <div className="hidden md:flex items-center gap-10">
             {navItems.map((item) => (
               <a 
                 key={item} 
