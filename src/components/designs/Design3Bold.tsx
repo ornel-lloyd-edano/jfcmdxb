@@ -54,7 +54,7 @@ export const Design3Bold = ({ onSelect }: Design3Props) => {
           <div className="max-w-4xl mx-auto space-y-8 animate-fade-up">
             <div className="flex items-center justify-center gap-4 mb-8">
               <div className="h-px w-16 bg-primary"></div>
-              <span className="font-body text-xs tracking-[0.4em] uppercase text-primary font-semibold">Welcome to</span>
+              <span className="font-body text-xs tracking-[0.4em] uppercase text-primary font-semibold">Pentecostal · Filipino · UAE</span>
               <div className="h-px w-16 bg-primary"></div>
             </div>
             
@@ -63,7 +63,7 @@ export const Design3Bold = ({ onSelect }: Design3Props) => {
             </h1>
             
             <p className="font-body text-xl md:text-2xl text-muted-foreground tracking-wide">
-              CHRISTIAN MINISTRIES
+              A SPIRIT-FILLED HOME FOR FILIPINOS IN DUBAI & RAK
             </p>
             
             {/* Mission Statement */}
@@ -102,7 +102,7 @@ export const Design3Bold = ({ onSelect }: Design3Props) => {
           <div className="text-center mb-20">
             <span className="font-body text-xs tracking-[0.4em] uppercase text-primary font-semibold">Our Mission</span>
             <h2 className="font-display text-5xl md:text-6xl font-bold text-foreground mt-4 mb-6">
-              CALLED TO SERVE
+              CALLED TO SERVE OFWs
             </h2>
             <div className="w-20 h-1 bg-primary mx-auto"></div>
           </div>
@@ -112,17 +112,17 @@ export const Design3Bold = ({ onSelect }: Design3Props) => {
               { 
                 icon: Heart, 
                 title: "WIN", 
-                desc: "Reaching the lost with bold proclamation of the Gospel, bringing souls into the Kingdom through the power of Christ's love." 
+                desc: "Reaching Filipino overseas workers with the bold proclamation of the Gospel and the transforming power of the Holy Spirit." 
               },
               { 
                 icon: Users, 
                 title: "TRAIN", 
-                desc: "Building strong disciples through rigorous study, accountability, and practical application of biblical truth in everyday life." 
+                desc: "Building Spirit-filled disciples through powerful worship, biblical teaching, and genuine kababayan accountability." 
               },
               { 
                 icon: Send, 
                 title: "SEND", 
-                desc: "Deploying kingdom workers to impact their spheres of influence—from local neighborhoods to the ends of the earth." 
+                desc: "Deploying Filipino believers as kingdom ambassadors in their workplaces across the UAE and back home to the Philippines." 
               }
             ].map((item, i) => (
               <div 
@@ -155,19 +155,19 @@ export const Design3Bold = ({ onSelect }: Design3Props) => {
               JOIN THE MOVEMENT
             </h2>
             <p className="font-body text-xl text-primary-foreground/80 mb-12 max-w-2xl mx-auto">
-              Be part of something greater. Experience authentic worship, transformative teaching, and life-changing community.
+              Be part of a Spirit-filled Filipino community. Experience powerful Pentecostal worship, biblical teaching, and kababayan fellowship.
             </p>
             
             <div className="grid md:grid-cols-2 gap-8 mb-12 max-w-2xl mx-auto">
               <div className="bg-primary-foreground/10 backdrop-blur-sm p-8 border border-primary-foreground/20">
-                <Clock className="w-8 h-8 text-accent mx-auto mb-4" />
-                <p className="font-body text-sm text-primary-foreground/60 uppercase tracking-widest mb-2">Service Times</p>
-                <p className="font-display text-2xl font-bold text-primary-foreground">9:00 AM & 11:00 AM</p>
+                <MapPin className="w-8 h-8 text-accent mx-auto mb-4" />
+                <p className="font-body text-sm text-primary-foreground/60 uppercase tracking-widest mb-2">Dubai</p>
+                <p className="font-display text-2xl font-bold text-primary-foreground">United Arab Emirates</p>
               </div>
               <div className="bg-primary-foreground/10 backdrop-blur-sm p-8 border border-primary-foreground/20">
                 <MapPin className="w-8 h-8 text-accent mx-auto mb-4" />
-                <p className="font-body text-sm text-primary-foreground/60 uppercase tracking-widest mb-2">Location</p>
-                <p className="font-display text-2xl font-bold text-primary-foreground">123 Faith Avenue</p>
+                <p className="font-body text-sm text-primary-foreground/60 uppercase tracking-widest mb-2">Ras Al Khaimah</p>
+                <p className="font-display text-2xl font-bold text-primary-foreground">United Arab Emirates</p>
               </div>
             </div>
             

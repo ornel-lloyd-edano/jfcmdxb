@@ -46,14 +46,14 @@ export const Design1Serene = ({ onSelect }: Design1Props) => {
             <div className="space-y-8 animate-fade-up">
               <div className="inline-flex items-center gap-2 bg-secondary px-4 py-2 rounded-full">
                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
-                <span className="font-body text-sm text-muted-foreground">Welcome Home</span>
+                <span className="font-body text-sm text-muted-foreground">A Pentecostal Church for Filipinos in the UAE</span>
               </div>
               <h1 className="font-display text-5xl md:text-7xl font-bold text-foreground leading-tight">
-                A Place Where <br />
-                <span className="text-primary">Faith Grows</span>
+                Your Home <br />
+                <span className="text-primary">Away From Home</span>
               </h1>
               <p className="font-body text-lg text-muted-foreground max-w-md leading-relaxed">
-                Join our community as we pursue God's purpose together. Experience authentic worship, meaningful connections, and spiritual growth.
+                A Spirit-filled Filipino community in Dubai and Ras Al Khaimah. Experience powerful worship, genuine kababayan fellowship, and grow deeper in your faith journey.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button variant="hero">
@@ -86,11 +86,11 @@ export const Design1Serene = ({ onSelect }: Design1Props) => {
               <div className="absolute bottom-6 left-6 right-6 bg-card/90 backdrop-blur-md rounded-2xl p-6 shadow-lg">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="font-body text-sm text-muted-foreground">Sunday Service</p>
-                    <p className="font-display text-xl font-semibold text-foreground">9:00 AM & 11:00 AM</p>
+                    <p className="font-body text-sm text-muted-foreground">Sunday Worship Service</p>
+                    <p className="font-display text-xl font-semibold text-foreground">Dubai & Ras Al Khaimah</p>
                   </div>
                   <Button variant="default" size="sm">
-                    Get Directions
+                    Find Location
                   </Button>
                 </div>
               </div>
@@ -105,14 +105,14 @@ export const Design1Serene = ({ onSelect }: Design1Props) => {
           <div className="text-center mb-16">
             <h2 className="font-display text-4xl font-bold text-foreground mb-4">Our Mission</h2>
             <p className="font-body text-muted-foreground max-w-2xl mx-auto">
-              We exist to lead people into a growing relationship with Jesus Christ through winning, training, and sending.
+              Serving the Filipino OFW community in the UAE with Spirit-filled worship, biblical teaching, and genuine fellowship.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { icon: Heart, title: "Win", desc: "Reaching the lost with the love of Christ through authentic relationships and community outreach." },
-              { icon: Users, title: "Train", desc: "Discipling believers to grow in faith through Bible study, mentorship, and spiritual formation." },
-              { icon: Send, title: "Send", desc: "Equipping and deploying leaders to serve in ministry, missions, and marketplace." }
+              { icon: Heart, title: "Win", desc: "Reaching Filipino overseas workers and families with the transforming power of the Gospel and the love of Christ." },
+              { icon: Users, title: "Train", desc: "Discipling believers through Spirit-led Bible study, Tagalog and English worship, and mentorship programs." },
+              { icon: Send, title: "Send", desc: "Equipping OFWs to be ambassadors of Christ in their workplaces and communities across the UAE and beyond." }
             ].map((item, i) => (
               <div 
                 key={item.title}
@@ -138,12 +138,12 @@ export const Design1Serene = ({ onSelect }: Design1Props) => {
             <h2 className="font-display text-4xl font-bold mb-8">Join Us This Sunday</h2>
             <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-8">
               <div className="flex items-center gap-3">
-                <Clock className="w-6 h-6" />
-                <span className="font-body text-lg">9:00 AM & 11:00 AM</span>
+                <MapPin className="w-6 h-6" />
+                <span className="font-body text-lg">Dubai</span>
               </div>
               <div className="flex items-center gap-3">
                 <MapPin className="w-6 h-6" />
-                <span className="font-body text-lg">123 Faith Avenue, City</span>
+                <span className="font-body text-lg">Ras Al Khaimah</span>
               </div>
             </div>
             <Button variant="heroLight">
