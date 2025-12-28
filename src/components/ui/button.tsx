@@ -30,6 +30,15 @@ const buttonVariants = cva(
         // Mission & Movement variants
         mission: "bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg px-6 py-3 font-bold tracking-tight shadow-md",
         missionOutline: "border-2 border-primary text-primary hover:bg-primary/10 rounded-lg px-6 py-3 font-bold tracking-tight",
+        // Heritage & Classic variants
+        heritage: "bg-primary text-primary-foreground hover:bg-primary/90 rounded-md px-6 py-3 font-semibold shadow-md",
+        heritageOutline: "border border-primary text-primary hover:bg-primary/10 rounded-md px-6 py-3 font-semibold",
+        // Contemporary variants
+        contemporary: "bg-gradient-to-r from-primary to-accent text-primary-foreground hover:brightness-110 rounded-full px-6 py-3 font-medium shadow-lg",
+        contemporaryOutline: "border border-primary/50 text-foreground hover:bg-primary/10 rounded-full px-6 py-3 font-medium backdrop-blur-sm",
+        // Joyful variants
+        joyful: "bg-accent text-accent-foreground hover:brightness-110 rounded-full px-6 py-3 font-bold shadow-lg",
+        joyfulOutline: "border-2 border-accent text-accent hover:bg-accent/10 rounded-full px-6 py-3 font-bold",
       },
       size: {
         default: "h-10 px-4 py-2",
