@@ -6,9 +6,12 @@ import { Design2Warm } from "@/components/designs/Design2Warm";
 import { Design3Bold } from "@/components/designs/Design3Bold";
 import { Design4Sacred } from "@/components/designs/Design4Sacred";
 import { Design5Mission } from "@/components/designs/Design5Mission";
+import { Design6Heritage } from "@/components/designs/Design6Heritage";
+import { Design7Contemporary } from "@/components/designs/Design7Contemporary";
+import { Design8Joyful } from "@/components/designs/Design8Joyful";
 import { ArrowLeft, Check } from "lucide-react";
 
-type DesignChoice = "selector" | "design1" | "design2" | "design3" | "design4" | "design5" | "selected";
+type DesignChoice = "selector" | "design1" | "design2" | "design3" | "design4" | "design5" | "design6" | "design7" | "design8" | "selected";
 
 const Index = () => {
   const [view, setView] = useState<DesignChoice>("selector");
@@ -25,6 +28,9 @@ const Index = () => {
     { key: "design3", name: "Bold & Contemporary", component: Design3Bold },
     { key: "design4", name: "Sacred & Liturgical", component: Design4Sacred },
     { key: "design5", name: "Mission & Movement", component: Design5Mission },
+    { key: "design6", name: "Heritage & Classic", component: Design6Heritage },
+    { key: "design7", name: "Contemporary & Modern", component: Design7Contemporary },
+    { key: "design8", name: "Joyful & Vibrant", component: Design8Joyful },
   ];
 
   // Render individual design views
@@ -254,6 +260,108 @@ const Index = () => {
                   <h3 className="font-display text-2xl font-semibold text-foreground mb-2">Mission & Movement</h3>
                   <p className="font-body text-muted-foreground text-sm">
                     Purpose-driven design with deep green, slate, orange highlights, and action-oriented typography.
+                  </p>
+                </div>
+                <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
+                  <span className="bg-primary text-primary-foreground px-6 py-3 rounded-full font-body font-medium shadow-lg">
+                    Preview Design
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Design 6 - Heritage & Classic */}
+            <div 
+              className="group cursor-pointer animate-fade-up"
+              style={{ animationDelay: "0.5s" }}
+              onClick={() => setView("design6")}
+            >
+              <div className="relative overflow-hidden rounded-2xl border border-border bg-card shadow-md hover:shadow-xl transition-all duration-300">
+                <div className="aspect-[4/3] bg-gradient-to-br from-amber-100 via-stone-100 to-amber-50 p-6 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="w-12 h-14 mx-auto mb-4 bg-amber-900/20 rounded-sm flex items-center justify-center">
+                      <TreeLogo className="w-8 h-10 text-amber-900" />
+                    </div>
+                    <div className="h-3 w-32 bg-amber-900/10 rounded mx-auto mb-2"></div>
+                    <div className="h-2 w-24 bg-amber-700/10 rounded mx-auto mb-4"></div>
+                    <div className="flex gap-2 justify-center">
+                      <div className="h-8 w-20 bg-amber-900 rounded-md"></div>
+                      <div className="h-8 w-20 bg-transparent border border-amber-900 rounded-md"></div>
+                    </div>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="font-display text-2xl font-semibold text-foreground mb-2">Heritage & Classic</h3>
+                  <p className="font-body text-muted-foreground text-sm">
+                    Timeless design with warm browns, cream tones, and traditional typography evoking church heritage.
+                  </p>
+                </div>
+                <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
+                  <span className="bg-primary text-primary-foreground px-6 py-3 rounded-full font-body font-medium shadow-lg">
+                    Preview Design
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Design 7 - Contemporary & Modern */}
+            <div 
+              className="group cursor-pointer animate-fade-up"
+              style={{ animationDelay: "0.6s" }}
+              onClick={() => setView("design7")}
+            >
+              <div className="relative overflow-hidden rounded-2xl border border-border bg-card shadow-md hover:shadow-xl transition-all duration-300">
+                <div className="aspect-[4/3] bg-gradient-to-br from-violet-100 via-purple-50 to-pink-100 p-6 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="w-12 h-14 mx-auto mb-4 bg-violet-600/20 rounded-2xl flex items-center justify-center">
+                      <TreeLogo className="w-8 h-10 text-violet-600" />
+                    </div>
+                    <div className="h-3 w-32 bg-violet-600/10 rounded mx-auto mb-2"></div>
+                    <div className="h-2 w-24 bg-pink-500/10 rounded mx-auto mb-4"></div>
+                    <div className="flex gap-2 justify-center">
+                      <div className="h-8 w-20 bg-gradient-to-r from-violet-600 to-pink-500 rounded-full"></div>
+                      <div className="h-8 w-20 bg-transparent border border-violet-600 rounded-full"></div>
+                    </div>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="font-display text-2xl font-semibold text-foreground mb-2">Contemporary & Modern</h3>
+                  <p className="font-body text-muted-foreground text-sm">
+                    Sleek gradients, modern typography, and a fresh aesthetic for contemporary worship.
+                  </p>
+                </div>
+                <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
+                  <span className="bg-primary text-primary-foreground px-6 py-3 rounded-full font-body font-medium shadow-lg">
+                    Preview Design
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Design 8 - Joyful & Vibrant */}
+            <div 
+              className="group cursor-pointer animate-fade-up"
+              style={{ animationDelay: "0.7s" }}
+              onClick={() => setView("design8")}
+            >
+              <div className="relative overflow-hidden rounded-2xl border border-border bg-card shadow-md hover:shadow-xl transition-all duration-300">
+                <div className="aspect-[4/3] bg-gradient-to-br from-orange-100 via-yellow-50 to-amber-100 p-6 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="w-12 h-14 mx-auto mb-4 bg-orange-500/20 rounded-full flex items-center justify-center">
+                      <TreeLogo className="w-8 h-10 text-orange-600" />
+                    </div>
+                    <div className="h-3 w-32 bg-orange-500/10 rounded mx-auto mb-2"></div>
+                    <div className="h-2 w-24 bg-yellow-500/20 rounded mx-auto mb-4"></div>
+                    <div className="flex gap-2 justify-center">
+                      <div className="h-8 w-20 bg-yellow-500 rounded-full"></div>
+                      <div className="h-8 w-20 bg-transparent border-2 border-yellow-500 rounded-full"></div>
+                    </div>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="font-display text-2xl font-semibold text-foreground mb-2">Joyful & Vibrant</h3>
+                  <p className="font-body text-muted-foreground text-sm">
+                    Bright, celebratory colors with energetic typography for a joyful worship experience.
                   </p>
                 </div>
                 <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">

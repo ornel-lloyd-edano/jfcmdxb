@@ -75,6 +75,10 @@ export default {
         "sacred-body": ["Source Serif 4", "serif"],
         mission: ["Montserrat", "sans-serif"],
         "mission-body": ["IBM Plex Sans", "sans-serif"],
+        heritage: ["Merriweather", "serif"],
+        "heritage-body": ["Lato", "sans-serif"],
+        contemporary: ["DM Sans", "sans-serif"],
+        joyful: ["Nunito", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",
