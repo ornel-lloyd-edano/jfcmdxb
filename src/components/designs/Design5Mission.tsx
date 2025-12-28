@@ -22,7 +22,7 @@ export const Design5Mission = ({ onSelect }: Design5Props) => {
               <span className="block text-[10px] text-muted-foreground font-mission-body tracking-widest uppercase">Christian Ministries</span>
             </div>
           </div>
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
               <a 
                 key={item} 

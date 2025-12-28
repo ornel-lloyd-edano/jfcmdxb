@@ -22,7 +22,7 @@ export const Design3Bold = ({ onSelect }: Design3Props) => {
               <span className="block text-[10px] text-muted-foreground font-body tracking-[0.4em] uppercase">Christian Ministries</span>
             </div>
           </div>
-          <div className="hidden lg:flex items-center gap-12">
+          <div className="hidden md:flex items-center gap-12">
             {navItems.map((item) => (
               <a 
                 key={item} 
