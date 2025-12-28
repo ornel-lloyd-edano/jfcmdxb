@@ -191,7 +191,7 @@ export const Design5Mission = ({ onSelect }: Design5Props) => {
               <div className="lg:w-1/2 space-y-6">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                    <TreeLogo className="w-6 h-7 text-primary-foreground" />
+                    <TreeLogo variant="white" className="w-6 h-7" />
                   </div>
                   <span className="font-mission text-sm font-bold text-primary uppercase tracking-wider">Join the Movement</span>
                 </div>
@@ -237,7 +237,7 @@ export const Design5Mission = ({ onSelect }: Design5Props) => {
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="flex items-center gap-4">
-              <TreeLogo className="w-12 h-14 text-primary-foreground" />
+              <TreeLogo variant="white" className="w-12 h-14" />
               <div>
                 <p className="font-mission text-xl font-bold">Jesus First Christian Ministries</p>
                 <p className="font-mission-body text-sm text-primary-foreground/60">TO WIN · TO TRAIN · TO SEND</p>
