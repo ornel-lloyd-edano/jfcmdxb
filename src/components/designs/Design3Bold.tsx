@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { TreeLogo } from "@/components/TreeLogo";
-import { Calendar, MapPin, Clock, ArrowRight, Users, Heart, Send, Menu } from "lucide-react";
+import { MapPin, ArrowRight, Users, Heart, Send, Video } from "lucide-react";
 import heroBold from "@/assets/hero-bold.jpg";
 
 interface Design3Props {
@@ -54,16 +54,17 @@ export const Design3Bold = ({ onSelect }: Design3Props) => {
           <div className="max-w-4xl mx-auto space-y-8 animate-fade-up">
             <div className="flex items-center justify-center gap-4 mb-8">
               <div className="h-px w-16 bg-primary"></div>
-              <span className="font-body text-xs tracking-[0.4em] uppercase text-primary font-semibold">Pentecostal · Filipino · UAE</span>
+              <span className="font-body text-xs tracking-[0.4em] uppercase text-primary font-semibold">Non-Denominational · Bible-Based · UAE</span>
               <div className="h-px w-16 bg-primary"></div>
             </div>
             
-            <h1 className="font-display text-6xl md:text-8xl lg:text-9xl font-bold text-foreground leading-none tracking-tight">
-              JESUS FIRST
+            <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-foreground leading-none tracking-tight">
+              WELCOME TO THE<br />
+              <span className="text-primary">JFCM DUBAI FAMILY</span>
             </h1>
             
-            <p className="font-body text-xl md:text-2xl text-muted-foreground tracking-wide">
-              A SPIRIT-FILLED HOME FOR FILIPINOS IN DUBAI & RAK
+            <p className="font-body text-lg md:text-xl text-muted-foreground tracking-wide max-w-2xl mx-auto">
+              A NON-PROFIT, BIBLE-BASED, CHURCH-PLANTING ORGANIZATION.<br />WE HONOR NO ONE ELSE BUT THE LORD JESUS CHRIST.
             </p>
             
             {/* Mission Statement */}
@@ -82,7 +83,8 @@ export const Design3Bold = ({ onSelect }: Design3Props) => {
                 <ArrowRight className="w-5 h-5" />
               </Button>
               <Button variant="boldOutline" className="min-w-[200px]">
-                Watch Live
+                <Video className="w-5 h-5" />
+                Join via Zoom
               </Button>
             </div>
           </div>
@@ -96,15 +98,28 @@ export const Design3Bold = ({ onSelect }: Design3Props) => {
         </div>
       </section>
 
+      {/* Scripture Section */}
+      <section className="py-20 bg-secondary/50">
+        <div className="container mx-auto px-6 text-center">
+          <p className="font-display text-2xl md:text-3xl text-foreground max-w-4xl mx-auto leading-relaxed">
+            "BUT SEEK FIRST HIS KINGDOM AND HIS RIGHTEOUSNESS, AND ALL THESE THINGS WILL BE GIVEN TO YOU AS WELL."
+          </p>
+          <p className="font-body text-sm text-primary mt-6 tracking-widest">— MATTHEW 6:33</p>
+        </div>
+      </section>
+
       {/* Mission Section */}
       <section className="py-32 bg-card">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
             <span className="font-body text-xs tracking-[0.4em] uppercase text-primary font-semibold">Our Mission</span>
             <h2 className="font-display text-5xl md:text-6xl font-bold text-foreground mt-4 mb-6">
-              CALLED TO SERVE OFWs
+              FULFILLING THE GREAT COMMISSION
             </h2>
-            <div className="w-20 h-1 bg-primary mx-auto"></div>
+            <p className="font-body text-muted-foreground max-w-2xl mx-auto">
+              Founded in June 1987 in Riyadh, Saudi Arabia. Now operating within Dubai's religious tolerance, serving expatriate communities.
+            </p>
+            <div className="w-20 h-1 bg-primary mx-auto mt-6"></div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-0">
@@ -112,17 +127,17 @@ export const Design3Bold = ({ onSelect }: Design3Props) => {
               { 
                 icon: Heart, 
                 title: "WIN", 
-                desc: "Reaching Filipino overseas workers with the bold proclamation of the Gospel and the transforming power of the Holy Spirit." 
+                desc: "Reaching expatriate communities with the bold proclamation of the Gospel, making disciples of all nations as Christ commanded." 
               },
               { 
                 icon: Users, 
                 title: "TRAIN", 
-                desc: "Building Spirit-filled disciples through powerful worship, biblical teaching, and genuine kababayan accountability." 
+                desc: "Building committed disciples through biblical teaching, discipleship, and genuine fellowship—teaching them to obey everything He commanded." 
               },
               { 
                 icon: Send, 
                 title: "SEND", 
-                desc: "Deploying Filipino believers as kingdom ambassadors in their workplaces across the UAE and back home to the Philippines." 
+                desc: "Deploying believers as kingdom ambassadors in their workplaces across the UAE and to the ends of the earth." 
               }
             ].map((item, i) => (
               <div 
@@ -154,27 +169,30 @@ export const Design3Bold = ({ onSelect }: Design3Props) => {
             <h2 className="font-display text-5xl md:text-7xl font-bold text-primary-foreground mb-8 tracking-tight">
               JOIN THE MOVEMENT
             </h2>
-            <p className="font-body text-xl text-primary-foreground/80 mb-12 max-w-2xl mx-auto">
-              Be part of a Spirit-filled Filipino community. Experience powerful Pentecostal worship, biblical teaching, and kababayan fellowship.
+            <p className="font-body text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
+              Physical attendance and online participation via Zoom available for those who can't attend in person.
             </p>
             
-            <div className="grid md:grid-cols-2 gap-8 mb-12 max-w-2xl mx-auto">
-              <div className="bg-primary-foreground/10 backdrop-blur-sm p-8 border border-primary-foreground/20">
-                <MapPin className="w-8 h-8 text-accent mx-auto mb-4" />
-                <p className="font-body text-sm text-primary-foreground/60 uppercase tracking-widest mb-2">Dubai</p>
-                <p className="font-display text-2xl font-bold text-primary-foreground">United Arab Emirates</p>
-              </div>
-              <div className="bg-primary-foreground/10 backdrop-blur-sm p-8 border border-primary-foreground/20">
-                <MapPin className="w-8 h-8 text-accent mx-auto mb-4" />
-                <p className="font-body text-sm text-primary-foreground/60 uppercase tracking-widest mb-2">Ras Al Khaimah</p>
-                <p className="font-display text-2xl font-bold text-primary-foreground">United Arab Emirates</p>
-              </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12 max-w-4xl mx-auto">
+              {["Dubai", "Ras Al Khaimah", "Abu Dhabi", "Al Ain"].map((location) => (
+                <div key={location} className="bg-primary-foreground/10 backdrop-blur-sm p-6 border border-primary-foreground/20">
+                  <MapPin className="w-6 h-6 text-accent mx-auto mb-3" />
+                  <p className="font-display text-lg font-bold text-primary-foreground">{location}</p>
+                  <p className="font-body text-xs text-primary-foreground/60 uppercase tracking-widest">UAE</p>
+                </div>
+              ))}
             </div>
             
-            <Button variant="heroLight" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90">
-              Plan Your Visit
-              <ArrowRight className="w-5 h-5" />
-            </Button>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Button variant="heroLight" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90">
+                Plan Your Visit
+                <ArrowRight className="w-5 h-5" />
+              </Button>
+              <Button variant="ghost" className="text-primary-foreground hover:bg-primary-foreground/10 border border-primary-foreground/30">
+                <Video className="w-5 h-5" />
+                Join via Zoom
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -185,7 +203,8 @@ export const Design3Bold = ({ onSelect }: Design3Props) => {
           <div className="flex flex-col items-center text-center">
             <TreeLogo className="w-16 h-20 text-primary mb-6" />
             <p className="font-display text-2xl font-bold text-foreground tracking-wide mb-2">JESUS FIRST CHRISTIAN MINISTRIES</p>
-            <p className="font-body text-xs text-muted-foreground tracking-[0.3em] mb-8">TO WIN · TO TRAIN · TO SEND</p>
+            <p className="font-body text-xs text-muted-foreground tracking-[0.3em] mb-2">TO WIN · TO TRAIN · TO SEND</p>
+            <p className="font-body text-xs text-muted-foreground/60 mb-8">Established 1987 · Riyadh, Saudi Arabia</p>
             <div className="flex items-center gap-8 font-body text-xs tracking-widest">
               {navItems.map((item) => (
                 <a key={item} href="#" className="text-muted-foreground hover:text-primary transition-colors uppercase">{item}</a>
