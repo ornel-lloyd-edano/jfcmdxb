@@ -9,10 +9,9 @@ import { Design5Mission } from "@/components/designs/Design5Mission";
 import { Design6Heritage } from "@/components/designs/Design6Heritage";
 import { Design7Contemporary } from "@/components/designs/Design7Contemporary";
 import { Design8Joyful } from "@/components/designs/Design8Joyful";
-import { DesignCatalogPDF } from "@/components/DesignCatalogPDF";
-import { ArrowLeft, Check, FileDown } from "lucide-react";
+import { ArrowLeft, Check } from "lucide-react";
 
-type DesignChoice = "selector" | "design1" | "design2" | "design3" | "design4" | "design5" | "design6" | "design7" | "design8" | "selected" | "pdf";
+type DesignChoice = "selector" | "design1" | "design2" | "design3" | "design4" | "design5" | "design6" | "design7" | "design8" | "selected";
 
 const Index = () => {
   const [view, setView] = useState<DesignChoice>("selector");
@@ -34,10 +33,6 @@ const Index = () => {
     { key: "design8", name: "Joyful & Vibrant", component: Design8Joyful },
   ];
 
-  // Show PDF catalog view
-  if (view === "pdf") {
-    return <DesignCatalogPDF onClose={() => setView("selector")} />;
-  }
 
   // Render individual design views
   const designView = designs.find(d => d.key === view);
@@ -101,10 +96,6 @@ const Index = () => {
         <p className="font-body text-sm text-primary font-semibold tracking-widest mb-6">
           TO WIN · TO TRAIN · TO SEND
         </p>
-        <Button variant="outline" onClick={() => setView("pdf")} className="gap-2">
-          <FileDown className="w-4 h-4" />
-          Download PDF Catalog
-        </Button>
       </header>
 
       {/* Design Options */}
