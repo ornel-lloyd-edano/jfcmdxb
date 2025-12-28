@@ -227,7 +227,7 @@ export const Design8Joyful = ({ onSelect }: Design8Props) => {
       <footer className="bg-primary text-primary-foreground py-16 px-6">
         <div className="container mx-auto">
           <div className="flex flex-col items-center text-center">
-            <TreeLogo className="w-14 h-16 text-primary-foreground mb-6" />
+            <TreeLogo variant="white" className="w-14 h-16 mb-6" />
             <p className="font-joyful text-2xl font-bold mb-2">Jesus First Christian Ministries</p>
             <p className="font-joyful text-sm opacity-80 mb-2">TO WIN · TO TRAIN · TO SEND</p>
             <p className="font-joyful text-xs opacity-60 mb-8">Established 1987 · Riyadh, Saudi Arabia</p>

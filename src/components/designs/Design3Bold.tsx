@@ -165,7 +165,7 @@ export const Design3Bold = ({ onSelect }: Design3Props) => {
         
         <div className="container mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <TreeLogo className="w-20 h-24 mx-auto mb-8 text-primary-foreground opacity-90" />
+            <TreeLogo variant="white" className="w-20 h-24 mx-auto mb-8 opacity-90" />
             <h2 className="font-display text-5xl md:text-7xl font-bold text-primary-foreground mb-8 tracking-tight">
               JOIN THE MOVEMENT
             </h2>

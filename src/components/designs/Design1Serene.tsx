@@ -145,7 +145,7 @@ export const Design1Serene = ({ onSelect }: Design1Props) => {
       <section className="py-20 px-6">
         <div className="container mx-auto">
           <div className="bg-primary rounded-3xl p-12 text-center text-primary-foreground">
-            <TreeLogo className="w-16 h-20 mx-auto mb-6 text-primary-foreground opacity-80" />
+            <TreeLogo variant="white" className="w-16 h-20 mx-auto mb-6 opacity-80" />
             <h2 className="font-display text-4xl font-bold mb-4">Join Us This Sunday</h2>
             <p className="font-body text-primary-foreground/80 mb-8 max-w-xl mx-auto">
               Physical attendance and online participation via Zoom available for those who can't attend in person.
@@ -175,7 +175,7 @@ export const Design1Serene = ({ onSelect }: Design1Props) => {
       {/* Footer */}
       <footer className="bg-foreground text-primary-foreground py-12 px-6">
         <div className="container mx-auto text-center">
-          <TreeLogo className="w-12 h-14 mx-auto mb-4 text-primary-foreground" />
+          <TreeLogo variant="white" className="w-12 h-14 mx-auto mb-4" />
           <p className="font-display text-xl mb-2">Jesus First Christian Ministries</p>
           <p className="font-body text-sm opacity-70 mb-2">TO WIN. TO TRAIN. TO SEND.</p>
           <p className="font-body text-xs opacity-50 mb-6">Established 1987 · Riyadh, Saudi Arabia</p>

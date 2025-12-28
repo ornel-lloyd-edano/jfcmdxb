@@ -165,7 +165,7 @@ export const Design2Warm = ({ onSelect }: Design2Props) => {
           <div className="bg-primary rounded-3xl overflow-hidden">
             <div className="grid lg:grid-cols-2">
               <div className="p-12 lg:p-16 flex flex-col justify-center">
-                <TreeLogo className="w-16 h-20 mb-8 text-primary-foreground opacity-80" />
+                <TreeLogo variant="white" className="w-16 h-20 mb-8 opacity-80" />
                 <h2 className="font-elegant text-4xl md:text-5xl font-medium text-primary-foreground mb-6">
                   Seek First<br />His Kingdom
                 </h2>
@@ -202,7 +202,7 @@ export const Design2Warm = ({ onSelect }: Design2Props) => {
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="flex items-center gap-4">
-              <TreeLogo className="w-14 h-16 text-primary-foreground" />
+              <TreeLogo variant="white" className="w-14 h-16" />
               <div>
                 <p className="font-elegant text-2xl">Jesus First Christian Ministries</p>
                 <p className="font-body text-sm opacity-60 tracking-widest">TO WIN · TO TRAIN · TO SEND</p>

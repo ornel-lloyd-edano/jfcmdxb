@@ -218,7 +218,7 @@ export const Design7Contemporary = ({ onSelect }: Design7Props) => {
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="flex items-center gap-4">
-              <TreeLogo className="w-12 h-14 text-primary-foreground" />
+              <TreeLogo variant="white" className="w-12 h-14" />
               <div>
                 <p className="font-contemporary text-xl font-bold">Jesus First Christian Ministries</p>
                 <p className="font-contemporary text-sm text-primary-foreground/60">TO WIN · TO TRAIN · TO SEND</p>

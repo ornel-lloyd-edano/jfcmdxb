@@ -214,7 +214,7 @@ export const Design4Sacred = ({ onSelect }: Design4Props) => {
       <footer className="bg-primary text-primary-foreground py-16 px-6">
         <div className="container mx-auto">
           <div className="flex flex-col items-center text-center">
-            <TreeLogo className="w-14 h-16 text-accent mb-6" />
+            <TreeLogo variant="white" className="w-14 h-16 mb-6" />
             <p className="font-sacred-display text-2xl tracking-wider mb-2">JESUS FIRST CHRISTIAN MINISTRIES</p>
             <p className="font-sacred-body text-sm text-accent tracking-widest mb-2">TO WIN · TO TRAIN · TO SEND</p>
             <p className="font-sacred-body text-xs text-primary-foreground/60 mb-8">Established 1987 · Riyadh, Saudi Arabia</p>
