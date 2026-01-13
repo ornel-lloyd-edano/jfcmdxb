@@ -412,7 +412,7 @@ export const AboutUs = () => {
               </Button>
               <Button 
                 variant="outline" 
-                className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground/20 font-mission font-bold"
+                className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 hover:text-primary border-0 font-mission font-bold"
               >
                 <Video className="w-4 h-4" />
                 Join Online
