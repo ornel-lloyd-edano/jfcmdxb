@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { TreeLogo } from "@/components/TreeLogo";
+import { MobileNav } from "@/components/MobileNav";
 import { MapPin, ArrowRight, Users, Heart, Send, Video, Globe, Target, Compass } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroMission from "@/assets/hero-mission.jpg";
@@ -35,9 +36,12 @@ export const Design5Mission = () => {
               </Link>
             ))}
           </div>
-          <Button variant="mission" className="hover:bg-primary/70">
-            Join the Mission
-          </Button>
+          <div className="flex items-center gap-2">
+            <MobileNav navItems={navItems} />
+            <Button variant="mission" className="hidden sm:flex hover:bg-primary/70">
+              Join the Mission
+            </Button>
+          </div>
         </div>
       </nav>
 
