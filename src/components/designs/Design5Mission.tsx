@@ -1,32 +1,38 @@
 import { Button } from "@/components/ui/button";
 import { TreeLogo } from "@/components/TreeLogo";
 import { MapPin, ArrowRight, Users, Heart, Send, Video, Globe, Target, Compass } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroMission from "@/assets/hero-mission.jpg";
 
 export const Design5Mission = () => {
-  const navItems = ["Home", "About Us", "Events", "Contact Us"];
+  const navItems = [
+    { label: "Home", path: "/" },
+    { label: "About Us", path: "/about" },
+    { label: "Events", path: "/events" },
+    { label: "Contact Us", path: "/contact" }
+  ];
 
   return (
     <div className="min-h-screen design-mission bg-background">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-3">
             <TreeLogo className="w-10 h-12" />
             <div>
               <span className="font-mission text-lg font-bold text-foreground tracking-tight">JESUS FIRST</span>
               <span className="block text-[10px] text-muted-foreground font-mission-body tracking-widest uppercase">Christian Ministries</span>
             </div>
-          </div>
+          </Link>
           <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
-              <a 
-                key={item} 
-                href="#" 
+              <Link 
+                key={item.label} 
+                to={item.path}
                 className="font-mission-body text-sm text-foreground hover:text-primary transition-colors font-medium"
               >
-                {item}
-              </a>
+                {item.label}
+              </Link>
             ))}
           </div>
           <Button variant="mission">
@@ -232,17 +238,17 @@ export const Design5Mission = () => {
       <footer className="bg-foreground text-primary-foreground py-16 px-6">
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-            <div className="flex items-center gap-4">
+            <Link to="/" className="flex items-center gap-4">
               <TreeLogo variant="white" className="w-12 h-14" />
               <div>
                 <p className="font-mission text-xl font-bold">Jesus First Christian Ministries</p>
                 <p className="font-mission-body text-sm text-primary-foreground/60">TO WIN · TO TRAIN · TO SEND</p>
                 <p className="font-mission-body text-xs text-primary-foreground/40 mt-1">Established 1987 · Riyadh, Saudi Arabia</p>
               </div>
-            </div>
+            </Link>
             <div className="flex items-center gap-8 font-mission-body text-sm">
               {navItems.map((item) => (
-                <a key={item} href="#" className="text-primary-foreground/60 hover:text-accent transition-colors font-medium">{item}</a>
+                <Link key={item.label} to={item.path} className="text-primary-foreground/60 hover:text-accent transition-colors font-medium">{item.label}</Link>
               ))}
             </div>
           </div>
