@@ -111,17 +111,16 @@ export const Design5Mission = () => {
       {/* Scripture Section */}
       <section className="py-12 bg-primary text-primary-foreground">
         <div className="container mx-auto px-6">
-          <div className="flex items-center justify-between flex-wrap gap-6">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center">
-                <Target className="w-6 h-6 text-accent" />
-              </div>
-              <div>
-                <p className="font-mission text-sm font-bold tracking-wider text-accent">OUR CALLING</p>
-                <p className="font-mission-body text-lg text-primary-foreground/90">"Seek first his kingdom and his righteousness"</p>
-              </div>
+          <div className="flex items-center gap-4">
+            <div className="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center shrink-0">
+              <Target className="w-6 h-6 text-accent" />
             </div>
-            <p className="font-mission-body text-sm text-primary-foreground/60">— Matthew 6:33</p>
+            <div>
+              <p className="font-mission text-sm font-bold tracking-wider text-accent">OUR CALLING</p>
+              <p className="font-mission-body text-lg text-primary-foreground/90">
+                "Seek first his kingdom and his righteousness" <span className="text-sm text-primary-foreground/60">— Matthew 6:33</span>
+              </p>
+            </div>
           </div>
         </div>
       </section>
