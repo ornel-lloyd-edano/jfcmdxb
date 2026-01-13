@@ -3,7 +3,7 @@ import { TreeLogo } from "@/components/TreeLogo";
 import { MobileNav } from "@/components/MobileNav";
 import { MapPin, ArrowRight, Users, Heart, Send, Video, Globe, Target, Compass } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroMission from "@/assets/hero-mission.jpg";
+import heroMission from "@/assets/hero-mosaic-new.jpg";
 
 export const Design5Mission = () => {
   const navItems = [
