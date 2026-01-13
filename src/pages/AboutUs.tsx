@@ -405,7 +405,7 @@ export const AboutUs = () => {
             <div className="flex flex-wrap justify-center gap-4">
               <Button 
                 variant="outline" 
-                className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 border-0 font-mission font-bold"
+                className="bg-primary-foreground text-primary hover:bg-primary-foreground/70 border-0 font-mission font-bold"
               >
                 Plan Your Visit
                 <ArrowRight className="w-4 h-4" />
