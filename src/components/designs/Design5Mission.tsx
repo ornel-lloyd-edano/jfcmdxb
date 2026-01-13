@@ -3,11 +3,7 @@ import { TreeLogo } from "@/components/TreeLogo";
 import { MapPin, ArrowRight, Users, Heart, Send, Video, Globe, Target, Compass } from "lucide-react";
 import heroMission from "@/assets/hero-mission.jpg";
 
-interface Design5Props {
-  onSelect: () => void;
-}
-
-export const Design5Mission = ({ onSelect }: Design5Props) => {
+export const Design5Mission = () => {
   const navItems = ["Home", "About Us", "Events", "Contact Us"];
 
   return (
@@ -252,13 +248,6 @@ export const Design5Mission = ({ onSelect }: Design5Props) => {
           </div>
         </div>
       </footer>
-
-      {/* Selection Button */}
-      <div className="fixed bottom-6 right-6 z-50">
-        <Button onClick={onSelect} variant="mission" className="shadow-2xl text-base px-8 py-6">
-          Choose This Design
-        </Button>
-      </div>
     </div>
   );
 };
