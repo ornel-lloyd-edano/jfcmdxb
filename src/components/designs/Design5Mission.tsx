@@ -35,7 +35,7 @@ export const Design5Mission = () => {
               </Link>
             ))}
           </div>
-          <Button variant="mission">
+          <Button variant="mission" className="hover:bg-primary/70">
             Join the Mission
           </Button>
         </div>
@@ -84,7 +84,7 @@ export const Design5Mission = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 pt-6">
-              <Button variant="mission" className="text-base px-8 py-6">
+              <Button variant="mission" className="text-base px-8 py-6 hover:bg-primary/70">
                 Join the Mission
                 <ArrowRight className="w-5 h-5" />
               </Button>
@@ -204,7 +204,7 @@ export const Design5Mission = () => {
                   Physical attendance and online participation via Zoom available for those who cannot attend in person.
                 </p>
                 <div className="flex flex-wrap gap-3">
-                  <Button variant="mission">
+                  <Button variant="mission" className="hover:bg-primary/70">
                     Plan Your Visit
                     <ArrowRight className="w-5 h-5" />
                   </Button>
