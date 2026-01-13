@@ -4,6 +4,7 @@ import { MobileNav } from "@/components/MobileNav";
 import { MapPin, ArrowRight, Video, Globe, BookOpen, Users, Church, ScrollText, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import heroAboutMosaic from "@/assets/hero-about-mosaic.jpg";
 
 export const AboutUs = () => {
   const navItems = [
@@ -112,17 +113,28 @@ export const AboutUs = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-b from-primary/5 to-background">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center space-y-6 animate-fade-up">
-            <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 px-4 py-2 rounded-full">
+      <section className="pt-20 relative min-h-[60vh] flex items-center">
+        {/* Hero Background */}
+        <div className="absolute inset-0">
+          <img 
+            src={heroAboutMosaic} 
+            alt="JFCM Ministry Activities" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/50" />
+        </div>
+        
+        {/* Hero Content */}
+        <div className="container mx-auto px-6 relative z-10 py-16">
+          <div className="max-w-2xl space-y-6 animate-fade-up">
+            <div className="inline-flex items-center gap-2 bg-accent/20 border border-accent/40 px-4 py-2 rounded-full">
               <Globe className="w-4 h-4 text-accent" />
-              <span className="font-mission-body text-sm text-foreground font-medium">Our Story & Mission</span>
+              <span className="font-mission-body text-sm text-primary-foreground font-medium">Our Story & Mission</span>
             </div>
-            <h1 className="font-mission text-5xl md:text-6xl font-extrabold text-foreground leading-tight tracking-tight">
-              About <span className="text-primary">JFCM</span>
+            <h1 className="font-mission text-5xl md:text-6xl font-extrabold text-primary-foreground leading-tight tracking-tight">
+              About <span className="text-accent">JFCM</span>
             </h1>
-            <p className="font-mission-body text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            <p className="font-mission-body text-xl text-primary-foreground/90 max-w-xl leading-relaxed">
               A church-planting ministry founded on the Great Commission, spreading the Gospel across nations since 1987.
             </p>
           </div>
