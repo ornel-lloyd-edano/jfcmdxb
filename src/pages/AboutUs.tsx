@@ -1,5 +1,6 @@
 import { TreeLogo } from "@/components/TreeLogo";
 import { Button } from "@/components/ui/button";
+import { MobileNav } from "@/components/MobileNav";
 import { MapPin, ArrowRight, Video, Globe, BookOpen, Users, Church, ScrollText, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -101,9 +102,12 @@ export const AboutUs = () => {
               </Link>
             ))}
           </div>
-          <Button variant="mission">
-            Join the Mission
-          </Button>
+          <div className="flex items-center gap-2">
+            <MobileNav navItems={navItems} />
+            <Button variant="mission" className="hidden sm:flex">
+              Join the Mission
+            </Button>
+          </div>
         </div>
       </nav>
 
