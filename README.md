@@ -4,6 +4,8 @@
 
 **URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
 
+> **Making this repository public?** See [MAKING_REPO_PUBLIC.md](./MAKING_REPO_PUBLIC.md) for instructions.
+
 ## How can I edit this code?
 
 There are several ways of editing your application.
