@@ -203,7 +203,7 @@ export const AboutUs = () => {
 
                 <div className="bg-card border border-border rounded-xl p-6 space-y-4">
                   <p className="font-mission-body text-muted-foreground leading-relaxed">
-                    These churches are further divided into groups that their respective overseers supervise. Its mission office is located in Mandaluyong, Philippines. The general overseer—Mario Pingol—and 11 other overseers make up the JFCM mission's council of elders.
+                    These churches are further divided into groups that their respective overseers supervise. Its mission office is located in Mandaluyong, Philippines. The general overseer— Mario Pingol, and 11 other overseers make up the JFCM mission's council of elders.
                   </p>
                 </div>
               </div>
