@@ -39,8 +39,8 @@ export const Design5Mission = () => {
           </div>
           <div className="flex items-center gap-2">
             <MobileNav navItems={navItems} />
-            <Button variant="mission" className="hidden sm:flex hover:bg-primary/70">
-              Join the Mission
+            <Button variant="mission" className="hidden sm:flex hover:bg-primary/70" asChild>
+              <Link to="/mission#join-form">Join the Mission</Link>
             </Button>
           </div>
         </div>
@@ -89,10 +89,12 @@ export const Design5Mission = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 pt-6">
-              <Button variant="mission" className="text-base px-8 py-6 hover:bg-primary/70">
+            <Button variant="mission" className="text-base px-8 py-6 hover:bg-primary/70" asChild>
+              <Link to="/mission#join-form">
                 Join the Mission
                 <ArrowRight className="w-5 h-5" />
-              </Button>
+              </Link>
+            </Button>
               <Button variant="missionOutline" className="text-base px-8 py-6">
                 <Video className="w-5 h-5" />
                 Join via Zoom

@@ -60,9 +60,11 @@ export const MobileNav = ({ navItems }: MobileNavProps) => {
 
           {/* CTA Button */}
           <DrawerClose asChild>
-            <Button variant="mission" className="w-full py-6 text-base hover:bg-primary/70">
-              Join the Mission
-            </Button>
+            <Link to="/mission#join-form">
+              <Button variant="mission" className="w-full py-6 text-base hover:bg-primary/70">
+                Join the Mission
+              </Button>
+            </Link>
           </DrawerClose>
         </div>
       </DrawerContent>

@@ -126,7 +126,11 @@ export const TheMission = () => {
           </div>
           <div className="flex items-center gap-2">
             <MobileNav navItems={navItems} />
-            <Button variant="mission" className="hidden sm:flex hover:bg-primary/70">
+            <Button 
+              variant="mission" 
+              className="hidden sm:flex hover:bg-primary/70"
+              onClick={() => document.getElementById('join-form')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Join the Mission
             </Button>
           </div>
@@ -302,7 +306,7 @@ export const TheMission = () => {
       </section>
 
       {/* CTA & Contact Form */}
-      <section className="py-24 bg-secondary/50">
+      <section id="join-form" className="py-24 bg-secondary/50 scroll-mt-20">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="bg-card border border-border rounded-3xl overflow-hidden shadow-2xl">
