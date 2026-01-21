@@ -20,54 +20,69 @@ export const TheMission = () => {
     email: ""
   });
 
-  const missions = [
+  const missionPhases = [
     {
-      number: 1,
-      title: "Attend weekly worship service and Bible study gatherings",
-      icon: Users,
-      verse: "And let us consider how we may spur one another on toward love and good deeds, not giving up meeting together, as some are in the habit of doing...",
-      reference: "Hebrews 10:24–25",
-      color: "bg-primary"
+      phase: "TO WIN",
+      description: "Reaching souls for Christ",
+      color: "bg-red-600",
+      missions: [
+        {
+          number: 1,
+          title: "Attend weekly worship service and Bible study gatherings",
+          icon: Users,
+          verse: "And let us consider how we may spur one another on toward love and good deeds, not giving up meeting together, as some are in the habit of doing...",
+          reference: "Hebrews 10:24–25"
+        },
+        {
+          number: 2,
+          title: "Be water baptized",
+          icon: Droplets,
+          verse: "Whoever believes and is baptized will be saved…",
+          reference: "Mark 16:16"
+        }
+      ]
     },
     {
-      number: 2,
-      title: "Be water baptized",
-      icon: Droplets,
-      verse: "Whoever believes and is baptized will be saved…",
-      reference: "Mark 16:16",
-      color: "bg-blue-600"
+      phase: "TO TRAIN",
+      description: "Equipping disciples for service",
+      color: "bg-blue-600",
+      missions: [
+        {
+          number: 3,
+          title: "Choose your ministry",
+          icon: Target,
+          verse: "There are different kinds of service, but the same Lord… Now to each one the manifestation of the Spirit is given for the common good.",
+          reference: "1 Corinthians 12:5–7"
+        },
+        {
+          number: 4,
+          title: "Complete the School of Workers training",
+          icon: GraduationCap,
+          verse: "Do your best to present yourself to God as one approved, a worker who does not need to be ashamed and who correctly handles the word of truth.",
+          reference: "2 Timothy 2:15"
+        }
+      ]
     },
     {
-      number: 3,
-      title: "Choose your ministry",
-      icon: Target,
-      verse: "There are different kinds of service, but the same Lord… Now to each one the manifestation of the Spirit is given for the common good.",
-      reference: "1 Corinthians 12:5–7",
-      color: "bg-purple-600"
-    },
-    {
-      number: 4,
-      title: "Complete the School of Workers training",
-      icon: GraduationCap,
-      verse: "Do your best to present yourself to God as one approved, a worker who does not need to be ashamed and who correctly handles the word of truth.",
-      reference: "2 Timothy 2:15",
-      color: "bg-amber-600"
-    },
-    {
-      number: 5,
-      title: "Serve in the ministry",
-      icon: HandHeart,
-      verse: "Each of you should use whatever gift you have received to serve others, as faithful stewards of God's grace.",
-      reference: "1 Peter 4:10",
-      color: "bg-rose-600"
-    },
-    {
-      number: 6,
-      title: "Evangelize and invite",
-      icon: Megaphone,
-      verse: "Therefore go and make disciples of all nations…",
-      reference: "Matthew 28:19–20",
-      color: "bg-teal-600"
+      phase: "TO SEND",
+      description: "Deploying workers to the harvest",
+      color: "bg-primary",
+      missions: [
+        {
+          number: 5,
+          title: "Serve in the ministry",
+          icon: HandHeart,
+          verse: "Each of you should use whatever gift you have received to serve others, as faithful stewards of God's grace.",
+          reference: "1 Peter 4:10"
+        },
+        {
+          number: 6,
+          title: "Evangelize and invite",
+          icon: Megaphone,
+          verse: "Therefore go and make disciples of all nations…",
+          reference: "Matthew 28:19–20"
+        }
+      ]
     }
   ];
 
@@ -173,56 +188,73 @@ export const TheMission = () => {
             <div className="text-center space-y-4 mb-16 animate-fade-up">
               <span className="font-mission text-sm font-bold text-accent uppercase tracking-widest">The Path Forward</span>
               <h2 className="font-mission text-4xl md:text-5xl font-extrabold text-foreground tracking-tight">
-                Your Mission Objectives
+                TO WIN · TO TRAIN · TO SEND
               </h2>
               <p className="font-mission-body text-lg text-muted-foreground max-w-2xl mx-auto">
-                Complete each step to become a fully equipped disciple and worker for God's kingdom.
+                Complete each phase to become a fully equipped disciple and worker for God's kingdom.
               </p>
             </div>
 
-            {/* Mission Cards */}
-            <div className="space-y-6">
-              {missions.map((mission, index) => (
-                <div 
-                  key={mission.number}
-                  className="group relative bg-card border border-border rounded-2xl p-6 md:p-8 hover:border-primary/50 hover:shadow-xl transition-all duration-500 animate-fade-up"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <div className="flex flex-col md:flex-row gap-6 items-start">
-                    {/* Mission Number & Icon */}
-                    <div className="flex items-center gap-4">
-                      <div className={`w-16 h-16 ${mission.color} rounded-2xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300`}>
-                        <mission.icon className="w-8 h-8 text-white" />
-                      </div>
-                      <div className="md:hidden">
-                        <span className="font-mission text-xs font-bold text-accent uppercase tracking-wider">Mission {mission.number}</span>
-                        <h3 className="font-mission text-xl font-bold text-foreground">{mission.title}</h3>
-                      </div>
+            {/* Mission Phases */}
+            <div className="space-y-16">
+              {missionPhases.map((phase, phaseIndex) => (
+                <div key={phase.phase} className="space-y-6 animate-fade-up" style={{ animationDelay: `${phaseIndex * 0.2}s` }}>
+                  {/* Phase Header */}
+                  <div className="flex items-center gap-4">
+                    <div className={`w-14 h-14 ${phase.color} rounded-2xl flex items-center justify-center`}>
+                      <span className="font-mission text-xl font-extrabold text-white">{phaseIndex + 1}</span>
                     </div>
+                    <div>
+                      <h3 className="font-mission text-2xl md:text-3xl font-extrabold text-foreground tracking-tight">{phase.phase}</h3>
+                      <p className="font-mission-body text-sm text-muted-foreground">{phase.description}</p>
+                    </div>
+                  </div>
 
-                    {/* Content */}
-                    <div className="flex-1 space-y-4">
-                      <div className="hidden md:block">
-                        <span className="font-mission text-xs font-bold text-accent uppercase tracking-wider">Mission {mission.number}</span>
-                        <h3 className="font-mission text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
-                          {mission.title}
-                        </h3>
-                      </div>
-                      
-                      <blockquote className="border-l-4 border-accent/50 pl-4 py-2 bg-secondary/30 rounded-r-lg">
-                        <p className="font-mission-body text-muted-foreground italic leading-relaxed">
-                          "{mission.verse}"
-                        </p>
-                        <cite className="font-mission-body text-sm text-accent mt-2 block font-semibold">
-                          — {mission.reference}
-                        </cite>
-                      </blockquote>
-                    </div>
+                  {/* Phase Missions */}
+                  <div className="space-y-4 pl-0 md:pl-[4.5rem]">
+                    {phase.missions.map((mission) => (
+                      <div 
+                        key={mission.number}
+                        className="group relative bg-card border border-border rounded-2xl p-6 md:p-8 hover:border-primary/50 hover:shadow-xl transition-all duration-500"
+                      >
+                        <div className="flex flex-col md:flex-row gap-6 items-start">
+                          {/* Mission Number & Icon */}
+                          <div className="flex items-center gap-4">
+                            <div className={`w-14 h-14 ${phase.color}/20 border-2 border-current rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300`} style={{ borderColor: `var(--${phase.color.replace('bg-', '')})` }}>
+                              <mission.icon className="w-7 h-7 text-foreground" />
+                            </div>
+                            <div className="md:hidden">
+                              <span className="font-mission text-xs font-bold text-accent uppercase tracking-wider">Mission {mission.number}</span>
+                              <h4 className="font-mission text-lg font-bold text-foreground">{mission.title}</h4>
+                            </div>
+                          </div>
 
-                    {/* Check indicator */}
-                    <div className="hidden md:flex items-center justify-center w-12 h-12 rounded-full border-2 border-dashed border-muted-foreground/30 group-hover:border-primary group-hover:bg-primary/10 transition-all">
-                      <CheckCircle2 className="w-6 h-6 text-muted-foreground/30 group-hover:text-primary transition-colors" />
-                    </div>
+                          {/* Content */}
+                          <div className="flex-1 space-y-4">
+                            <div className="hidden md:block">
+                              <span className="font-mission text-xs font-bold text-accent uppercase tracking-wider">Mission {mission.number}</span>
+                              <h4 className="font-mission text-xl font-bold text-foreground group-hover:text-primary transition-colors">
+                                {mission.title}
+                              </h4>
+                            </div>
+                            
+                            <blockquote className="border-l-4 border-accent/50 pl-4 py-2 bg-secondary/30 rounded-r-lg">
+                              <p className="font-mission-body text-muted-foreground italic leading-relaxed">
+                                "{mission.verse}"
+                              </p>
+                              <cite className="font-mission-body text-sm text-accent mt-2 block font-semibold">
+                                — {mission.reference}
+                              </cite>
+                            </blockquote>
+                          </div>
+
+                          {/* Check indicator */}
+                          <div className="hidden md:flex items-center justify-center w-12 h-12 rounded-full border-2 border-dashed border-muted-foreground/30 group-hover:border-primary group-hover:bg-primary/10 transition-all">
+                            <CheckCircle2 className="w-6 h-6 text-muted-foreground/30 group-hover:text-primary transition-colors" />
+                          </div>
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
               ))}
