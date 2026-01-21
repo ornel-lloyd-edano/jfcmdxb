@@ -2,8 +2,8 @@ import { TreeLogo } from "@/components/TreeLogo";
 import { Button } from "@/components/ui/button";
 import { MobileNav } from "@/components/MobileNav";
 import { ArrowRight, Target, Droplets, Users, GraduationCap, HandHeart, Megaphone, Home, Rocket, CheckCircle2, MessageCircle, Mail, Phone } from "lucide-react";
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 export const TheMission = () => {
   const navItems = [
@@ -14,11 +14,25 @@ export const TheMission = () => {
     { label: "Contact Us", path: "/contact" }
   ];
 
+  const location = useLocation();
+  
   const [formData, setFormData] = useState({
     name: "",
     whatsapp: "",
     email: ""
   });
+
+  // Handle hash scroll on navigation
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.getElementById(location.hash.slice(1));
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }, [location]);
 
   const missionPhases = [
     {
