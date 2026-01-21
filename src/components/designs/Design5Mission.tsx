@@ -9,6 +9,7 @@ export const Design5Mission = () => {
   const navItems = [
     { label: "Home", path: "/" },
     { label: "About Us", path: "/about" },
+    { label: "The Mission", path: "/mission" },
     { label: "Events", path: "/events" },
     { label: "Contact Us", path: "/contact" }
   ];
