@@ -13,6 +13,9 @@ export const AboutUs = () => {
     label: "About Us",
     path: "/about"
   }, {
+    label: "The Mission",
+    path: "/mission"
+  }, {
     label: "Events",
     path: "/events"
   }, {
