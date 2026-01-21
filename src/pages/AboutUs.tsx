@@ -5,79 +5,80 @@ import { MapPin, ArrowRight, Video, Globe, BookOpen, Users, Church, ScrollText, 
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import heroAboutMosaic from "@/assets/hero-about-mosaic.jpg";
-
 export const AboutUs = () => {
-  const navItems = [
-    { label: "Home", path: "/" },
-    { label: "About Us", path: "/about" },
-    { label: "Events", path: "/events" },
-    { label: "Contact Us", path: "/contact" }
-  ];
-
+  const navItems = [{
+    label: "Home",
+    path: "/"
+  }, {
+    label: "About Us",
+    path: "/about"
+  }, {
+    label: "Events",
+    path: "/events"
+  }, {
+    label: "Contact Us",
+    path: "/contact"
+  }];
   const [expandedSection, setExpandedSection] = useState<string | null>("history");
-
-  const sections = [
-    { id: "history", title: "JFCM History", icon: BookOpen },
-    { id: "dubai", title: "JFCM Dubai", icon: MapPin },
-    { id: "rak", title: "JFCM RAK", icon: MapPin },
-    { id: "faith", title: "Our Statement of Faith", icon: ScrollText },
-  ];
-
-  const statementOfFaith = [
-    {
-      number: 1,
-      title: "We believe in the Bible",
-      content: "We believe that the BIBLE is the infallible word of God and the absolute authority in matters of faith and conduct."
-    },
-    {
-      number: 2,
-      title: "We believe in the Holy Trinity",
-      content: "We believe that God eternally exists in three distinct persons of the Father, the Son, and the Holy Spirit."
-    },
-    {
-      number: 3,
-      title: "We believe in the Lord Jesus Christ",
-      content: "We believe that Jesus Christ is the incarnate Word who was conceived by the Holy Spirit, born of Mary who was a virgin and who died sacrificially for our sins. He was buried, resurrected bodily on the third day, and ascended into heaven. He will come again to judge the living and the dead."
-    },
-    {
-      number: 4,
-      title: "We believe that all men have sinned against God",
-      content: "We believe that all men have sinned against God and that they are saved solely by grace through faith in the Lord Jesus Christ and His redemptive work."
-    },
-    {
-      number: 5,
-      title: "We believe in the Holy Spirit",
-      content: "We believe that the Holy Spirit is the eternal Spirit of God sent to the church to empower it to live a holy life and to witness to the whole world."
-    },
-    {
-      number: 6,
-      title: "We believe that there is only one church",
-      content: "We believe that there is only one church, the body of Christ with Jesus as its head and that all believers in every generation belong to it."
-    },
-    {
-      number: 7,
-      title: "We believe that the church is tasked by God to preach the gospel to all nations",
-      content: "We believe that the church is tasked by God to preach the gospel to all nations. This it can accomplish by planting churches and supporting missions through tithes and offerings."
-    },
-    {
-      number: 8,
-      title: "We believe that Christ will come again",
-      content: "We believe in the rapture of saints, the second coming of Christ, the resurrection of the body, the judgement of the believers, the judgement of non-believers, and in life everlasting."
-    },
-    {
-      number: 9,
-      title: "We believe in the ordinances of Water Baptism and the Breaking of Bread",
-      content: "We believe in the ordinances of the Water Baptism and the Breaking of the Bread."
-    },
-    {
-      number: 10,
-      title: "We believe in the sanctity of marriage",
-      content: "We believe in the sanctity of marriage - that it is biblical, singular and exclusively between man and woman."
-    }
-  ];
-
-  return (
-    <div className="min-h-screen design-mission bg-background">
+  const sections = [{
+    id: "history",
+    title: "JFCM History",
+    icon: BookOpen
+  }, {
+    id: "dubai",
+    title: "JFCM Dubai",
+    icon: MapPin
+  }, {
+    id: "rak",
+    title: "JFCM RAK",
+    icon: MapPin
+  }, {
+    id: "faith",
+    title: "Our Statement of Faith",
+    icon: ScrollText
+  }];
+  const statementOfFaith = [{
+    number: 1,
+    title: "We believe in the Bible",
+    content: "We believe that the BIBLE is the infallible word of God and the absolute authority in matters of faith and conduct."
+  }, {
+    number: 2,
+    title: "We believe in the Holy Trinity",
+    content: "We believe that God eternally exists in three distinct persons of the Father, the Son, and the Holy Spirit."
+  }, {
+    number: 3,
+    title: "We believe in the Lord Jesus Christ",
+    content: "We believe that Jesus Christ is the incarnate Word who was conceived by the Holy Spirit, born of Mary who was a virgin and who died sacrificially for our sins. He was buried, resurrected bodily on the third day, and ascended into heaven. He will come again to judge the living and the dead."
+  }, {
+    number: 4,
+    title: "We believe that all men have sinned against God",
+    content: "We believe that all men have sinned against God and that they are saved solely by grace through faith in the Lord Jesus Christ and His redemptive work."
+  }, {
+    number: 5,
+    title: "We believe in the Holy Spirit",
+    content: "We believe that the Holy Spirit is the eternal Spirit of God sent to the church to empower it to live a holy life and to witness to the whole world."
+  }, {
+    number: 6,
+    title: "We believe that there is only one church",
+    content: "We believe that there is only one church, the body of Christ with Jesus as its head and that all believers in every generation belong to it."
+  }, {
+    number: 7,
+    title: "We believe that the church is tasked by God to preach the gospel to all nations",
+    content: "We believe that the church is tasked by God to preach the gospel to all nations. This it can accomplish by planting churches and supporting missions through tithes and offerings."
+  }, {
+    number: 8,
+    title: "We believe that Christ will come again",
+    content: "We believe in the rapture of saints, the second coming of Christ, the resurrection of the body, the judgement of the believers, the judgement of non-believers, and in life everlasting."
+  }, {
+    number: 9,
+    title: "We believe in the ordinances of Water Baptism and the Breaking of Bread",
+    content: "We believe in the ordinances of the Water Baptism and the Breaking of the Bread."
+  }, {
+    number: 10,
+    title: "We believe in the sanctity of marriage",
+    content: "We believe in the sanctity of marriage - that it is biblical, singular and exclusively between man and woman."
+  }];
+  return <div className="min-h-screen design-mission bg-background">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
@@ -89,19 +90,9 @@ export const AboutUs = () => {
             </div>
           </Link>
           <div className="hidden md:flex items-center gap-8">
-            {navItems.map((item) => (
-              <Link 
-                key={item.label} 
-                to={item.path}
-                className={`font-mission-body text-sm transition-colors font-medium ${
-                  item.path === "/about" 
-                    ? "text-primary" 
-                    : "text-foreground hover:text-primary"
-                }`}
-              >
+            {navItems.map(item => <Link key={item.label} to={item.path} className={`font-mission-body text-sm transition-colors font-medium ${item.path === "/about" ? "text-primary" : "text-foreground hover:text-primary"}`}>
                 {item.label}
-              </Link>
-            ))}
+              </Link>)}
           </div>
           <div className="flex items-center gap-2">
             <MobileNav navItems={navItems} />
@@ -116,11 +107,7 @@ export const AboutUs = () => {
       <section className="pt-20 relative min-h-[60vh] flex items-center">
         {/* Hero Background */}
         <div className="absolute inset-0">
-          <img 
-            src={heroAboutMosaic} 
-            alt="JFCM Ministry Activities" 
-            className="w-full h-full object-cover"
-          />
+          <img src={heroAboutMosaic} alt="JFCM Ministry Activities" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/50" />
         </div>
         
@@ -134,9 +121,7 @@ export const AboutUs = () => {
             <h1 className="font-mission text-5xl md:text-6xl font-extrabold text-primary-foreground leading-tight tracking-tight">
               About <span className="text-accent">JFCM</span>
             </h1>
-            <p className="font-mission-body text-xl text-primary-foreground/90 max-w-xl leading-relaxed">
-              A church-planting ministry founded on the Great Commission, spreading the Gospel across nations since 1987.
-            </p>
+            <p className="font-mission-body text-xl text-primary-foreground/90 max-w-xl leading-relaxed">A church-planting ministry founded on the Great Commission — spreading the Gospel across nations since 1987.</p>
           </div>
         </div>
       </section>
@@ -145,23 +130,16 @@ export const AboutUs = () => {
       <section className="py-8 bg-secondary/30 sticky top-[73px] z-40 border-b border-border">
         <div className="container mx-auto px-6">
           <div className="flex flex-wrap justify-center gap-3">
-            {sections.map((section) => (
-              <button
-                key={section.id}
-                onClick={() => {
-                  setExpandedSection(section.id);
-                  document.getElementById(section.id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }}
-                className={`flex items-center gap-2 px-4 py-2 rounded-full font-mission-body text-sm font-medium transition-all ${
-                  expandedSection === section.id
-                    ? "bg-primary text-primary-foreground"
-                    : "bg-card border border-border text-foreground hover:border-primary/50"
-                }`}
-              >
+            {sections.map(section => <button key={section.id} onClick={() => {
+            setExpandedSection(section.id);
+            document.getElementById(section.id)?.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }} className={`flex items-center gap-2 px-4 py-2 rounded-full font-mission-body text-sm font-medium transition-all ${expandedSection === section.id ? "bg-primary text-primary-foreground" : "bg-card border border-border text-foreground hover:border-primary/50"}`}>
                 <section.icon className="w-4 h-4" />
                 {section.title}
-              </button>
-            ))}
+              </button>)}
           </div>
         </div>
       </section>
@@ -384,12 +362,9 @@ export const AboutUs = () => {
             </div>
 
             <div className="space-y-4">
-              {statementOfFaith.map((item, index) => (
-                <div 
-                  key={item.number}
-                  className="bg-card border border-border rounded-xl overflow-hidden hover:border-primary/30 transition-all duration-300 animate-fade-up"
-                  style={{ animationDelay: `${index * 0.05}s` }}
-                >
+              {statementOfFaith.map((item, index) => <div key={item.number} className="bg-card border border-border rounded-xl overflow-hidden hover:border-primary/30 transition-all duration-300 animate-fade-up" style={{
+              animationDelay: `${index * 0.05}s`
+            }}>
                   <div className="p-6 flex gap-5">
                     <div className="shrink-0">
                       <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
@@ -401,8 +376,7 @@ export const AboutUs = () => {
                       <p className="font-mission-body text-muted-foreground leading-relaxed">{item.content}</p>
                     </div>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </div>
@@ -419,17 +393,11 @@ export const AboutUs = () => {
               Be part of a community committed to spreading the Gospel and planting churches across nations.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button 
-                variant="outline" 
-                className="bg-primary-foreground text-primary hover:bg-primary-foreground/70 border-0 font-mission font-bold"
-              >
+              <Button variant="outline" className="bg-primary-foreground text-primary hover:bg-primary-foreground/70 border-0 font-mission font-bold">
                 Plan Your Visit
                 <ArrowRight className="w-4 h-4" />
               </Button>
-              <Button 
-                variant="outline" 
-                className="bg-primary-foreground text-primary hover:bg-primary-foreground/70 hover:text-primary border-0 font-mission font-bold"
-              >
+              <Button variant="outline" className="bg-primary-foreground text-primary hover:bg-primary-foreground/70 hover:text-primary border-0 font-mission font-bold">
                 <Video className="w-4 h-4" />
                 Join Online
               </Button>
@@ -451,21 +419,13 @@ export const AboutUs = () => {
               </div>
             </Link>
             <div className="flex items-center gap-8 font-mission-body text-sm">
-              {navItems.map((item) => (
-                <Link 
-                  key={item.label} 
-                  to={item.path} 
-                  className="text-primary-foreground/60 hover:text-accent transition-colors font-medium"
-                >
+              {navItems.map(item => <Link key={item.label} to={item.path} className="text-primary-foreground/60 hover:text-accent transition-colors font-medium">
                   {item.label}
-                </Link>
-              ))}
+                </Link>)}
             </div>
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default AboutUs;
