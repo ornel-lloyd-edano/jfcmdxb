@@ -1,7 +1,7 @@
 import { TreeLogo } from "@/components/TreeLogo";
 import { Button } from "@/components/ui/button";
 import { MobileNav } from "@/components/MobileNav";
-import { ArrowRight, Target, Droplets, Users, GraduationCap, HandHeart, Megaphone, Home, Rocket, CheckCircle2, MessageCircle, Mail, Phone } from "lucide-react";
+import { ArrowRight, Target, Droplets, Users, GraduationCap, HandHeart, Megaphone, Home, Rocket, CheckCircle2, MessageCircle, Mail, Phone, Flame } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 
@@ -100,12 +100,20 @@ export const TheMission = () => {
     }
   ];
 
-  const bonusMission = {
-    title: "Plant house churches",
-    icon: Home,
-    verse: "They preached the gospel in that city and won a large number of disciples. Then they returned to Lystra, Iconium and Antioch, strengthening the disciples and appointing elders for them in each church.",
-    reference: "Acts 14:21–23"
-  };
+  const bonusMissions = [
+    {
+      title: "Be baptized in the Spirit",
+      icon: Flame,
+      verse: "Do not leave Jerusalem, but wait for the gift my Father promised… For John baptized with water, but in a few days you will be baptized with the Holy Spirit… You will receive power when the Holy Spirit comes on you; and you will be my witnesses.",
+      reference: "Acts 1:4–5, 8"
+    },
+    {
+      title: "Plant house churches",
+      icon: Home,
+      verse: "They preached the gospel in that city and won a large number of disciples. Then they returned to Lystra, Iconium and Antioch, strengthening the disciples and appointing elders for them in each church.",
+      reference: "Acts 14:21–23"
+    }
+  ];
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -278,42 +286,46 @@ export const TheMission = () => {
               ))}
             </div>
 
-            {/* Bonus Mission */}
-            <div className="mt-12 relative animate-fade-up" style={{ animationDelay: "0.6s" }}>
-              <div className="absolute -inset-1 bg-gradient-to-r from-accent via-primary to-accent rounded-3xl blur opacity-30" />
-              <div className="relative bg-gradient-to-br from-primary to-primary/90 rounded-2xl p-8 md:p-10 text-primary-foreground">
-                <div className="flex flex-col md:flex-row gap-6 items-start">
-                  <div className="flex items-center gap-4">
-                    <div className="w-20 h-20 bg-accent rounded-2xl flex items-center justify-center shrink-0">
-                      <bonusMission.icon className="w-10 h-10 text-accent-foreground" />
-                    </div>
-                    <div className="md:hidden">
-                      <span className="font-mission text-xs font-bold text-accent uppercase tracking-wider flex items-center gap-2">
-                        <Rocket className="w-4 h-4" /> Bonus Mission
-                      </span>
-                      <h3 className="font-mission text-xl font-bold">{bonusMission.title}</h3>
-                    </div>
-                  </div>
+            {/* Bonus Missions */}
+            <div className="mt-12 space-y-6">
+              {bonusMissions.map((bonusMission, index) => (
+                <div key={bonusMission.title} className="relative animate-fade-up" style={{ animationDelay: `${0.6 + index * 0.1}s` }}>
+                  <div className="absolute -inset-1 bg-gradient-to-r from-accent via-primary to-accent rounded-3xl blur opacity-30" />
+                  <div className="relative bg-gradient-to-br from-primary to-primary/90 rounded-2xl p-8 md:p-10 text-primary-foreground">
+                    <div className="flex flex-col md:flex-row gap-6 items-start">
+                      <div className="flex items-center gap-4">
+                        <div className="w-20 h-20 bg-accent rounded-2xl flex items-center justify-center shrink-0">
+                          <bonusMission.icon className="w-10 h-10 text-accent-foreground" />
+                        </div>
+                        <div className="md:hidden">
+                          <span className="font-mission text-xs font-bold text-accent uppercase tracking-wider flex items-center gap-2">
+                            <Rocket className="w-4 h-4" /> Bonus Mission
+                          </span>
+                          <h3 className="font-mission text-xl font-bold">{bonusMission.title}</h3>
+                        </div>
+                      </div>
 
-                  <div className="flex-1 space-y-4">
-                    <div className="hidden md:block">
-                      <span className="font-mission text-sm font-bold text-accent uppercase tracking-wider flex items-center gap-2">
-                        <Rocket className="w-4 h-4" /> Bonus Mission
-                      </span>
-                      <h3 className="font-mission text-3xl font-bold">{bonusMission.title}</h3>
+                      <div className="flex-1 space-y-4">
+                        <div className="hidden md:block">
+                          <span className="font-mission text-sm font-bold text-accent uppercase tracking-wider flex items-center gap-2">
+                            <Rocket className="w-4 h-4" /> Bonus Mission
+                          </span>
+                          <h3 className="font-mission text-3xl font-bold">{bonusMission.title}</h3>
+                        </div>
+                        
+                        <blockquote className="border-l-4 border-accent pl-4 py-2">
+                          <p className="font-mission-body text-primary-foreground/90 italic leading-relaxed">
+                            "{bonusMission.verse}"
+                          </p>
+                          <cite className="font-mission-body text-sm text-accent mt-2 block font-semibold">
+                            — {bonusMission.reference}
+                          </cite>
+                        </blockquote>
+                      </div>
                     </div>
-                    
-                    <blockquote className="border-l-4 border-accent pl-4 py-2">
-                      <p className="font-mission-body text-primary-foreground/90 italic leading-relaxed">
-                        "{bonusMission.verse}"
-                      </p>
-                      <cite className="font-mission-body text-sm text-accent mt-2 block font-semibold">
-                        — {bonusMission.reference}
-                      </cite>
-                    </blockquote>
                   </div>
                 </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
