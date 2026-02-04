@@ -170,7 +170,7 @@ const ContactUs = () => {
                   className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-35 group-hover:opacity-45 transition-opacity"
                   style={{ backgroundImage: `url(${elder.photo})` }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/95 to-background/80" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/60 to-background/40" />
                 
                 <CardContent className="p-6 relative z-10">
                   {/* Avatar Photo */}
