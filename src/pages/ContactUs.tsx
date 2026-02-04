@@ -3,7 +3,15 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { TreeLogo } from "@/components/TreeLogo";
 import { MobileNav } from "@/components/MobileNav";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Phone, MapPin, Heart, Users, MessageCircle } from "lucide-react";
+
+import alexPhoto from "@/assets/elders/alex.png";
+import noelPhoto from "@/assets/elders/noel.jpg";
+import ferdsPhoto from "@/assets/elders/ferds.jpg";
+import reyPhoto from "@/assets/elders/rey.jpg";
+import mikePhoto from "@/assets/elders/mike.jpg";
+import andreiPhoto from "@/assets/elders/andrei.jpg";
 
 const ContactUs = () => {
   const navItems = [
@@ -20,36 +28,42 @@ const ContactUs = () => {
       phone: "0569552399",
       areas: "Muraqqabat",
       isPastor: true,
+      photo: alexPhoto,
     },
     {
       title: "Elder Noel",
       name: "Noel Junto",
       phone: "0522609637",
       areas: "Muteena / Al Khail / Rashidiya / RAK",
+      photo: noelPhoto,
     },
     {
       title: "Elder Ferds",
       name: "Ferdinand Abadilla",
       phone: "0509453597",
       areas: "Al Barsha / DIP",
+      photo: ferdsPhoto,
     },
     {
       title: "Elder Rey",
       name: "Rey Fernandez",
       phone: "0562230292",
       areas: "Al Nahda / Muhaisnah",
+      photo: reyPhoto,
     },
     {
       title: "Elder Mike",
       name: "Michael Mallari",
       phone: "0501458243",
       areas: "Karama / Bur Dubai / Satwa",
+      photo: mikePhoto,
     },
     {
       title: "Assistant Elder Andrei",
       name: "Andrei Cabang",
       phone: "0561121105",
       areas: "RAK / Um Al Quwain",
+      photo: andreiPhoto,
     },
   ];
 
@@ -152,14 +166,21 @@ const ContactUs = () => {
                 }`}
               >
                 <CardContent className="p-6">
-                  {/* Avatar Circle */}
-                  <div className={`w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mb-4 ${
+                  {/* Avatar Photo */}
+                  <Avatar className={`w-20 h-20 mb-4 ring-4 ${
                     elder.isPastor 
-                      ? 'bg-primary text-primary-foreground' 
-                      : 'bg-secondary text-secondary-foreground'
+                      ? 'ring-primary/30' 
+                      : 'ring-secondary/30'
                   }`}>
-                    {elder.name.split(' ').map(n => n[0]).join('')}
-                  </div>
+                    <AvatarImage src={elder.photo} alt={elder.name} className="object-cover" />
+                    <AvatarFallback className={`text-2xl font-bold ${
+                      elder.isPastor 
+                        ? 'bg-primary text-primary-foreground' 
+                        : 'bg-secondary text-secondary-foreground'
+                    }`}>
+                      {elder.name.split(' ').map(n => n[0]).join('')}
+                    </AvatarFallback>
+                  </Avatar>
 
                   {/* Title & Name */}
                   <div className="mb-4">
