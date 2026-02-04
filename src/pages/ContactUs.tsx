@@ -144,11 +144,11 @@ const ContactUs = () => {
       </section>
 
       {/* Warm Message */}
-      <section className="py-8 bg-accent/30">
+      <section className="py-8 bg-primary">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-center gap-4 text-center">
-            <MessageCircle className="w-6 h-6 text-primary flex-shrink-0" />
-            <p className="font-mission-body text-foreground/80 italic">
+            <MessageCircle className="w-6 h-6 text-primary-foreground flex-shrink-0" />
+            <p className="font-mission-body text-primary-foreground/90 italic">
               "Don't hesitate to call or message us. We're not strangers — we're brothers and sisters in Christ."
             </p>
           </div>
