@@ -215,8 +215,8 @@ const ContactUs = () => {
                       href={`tel:${elder.phone}`}
                       className="flex items-center gap-3 text-foreground hover:text-accent transition-colors group/link"
                     >
-                      <div className="w-10 h-10 rounded-full bg-accent/10 backdrop-blur-sm flex items-center justify-center group-hover/link:bg-accent/20 transition-colors">
-                        <Phone className="w-4 h-4 text-accent" />
+                      <div className="w-10 h-10 rounded-full bg-primary/10 backdrop-blur-sm flex items-center justify-center group-hover/link:bg-primary/20 transition-colors">
+                        <Phone className="w-4 h-4 text-primary" />
                       </div>
                       <span className="font-mission-body font-medium">{elder.phone}</span>
                     </a>
