@@ -111,7 +111,7 @@ const ContactUs = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 md:pb-28 overflow-hidden">
+      <section className="relative pt-40 pb-20 md:pb-28 overflow-hidden">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
