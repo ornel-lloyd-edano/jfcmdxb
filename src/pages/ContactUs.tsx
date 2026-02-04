@@ -149,7 +149,7 @@ const ContactUs = () => {
           <div className="flex items-center justify-center gap-4 text-center">
             <MessageCircle className="w-6 h-6 text-primary flex-shrink-0" />
             <p className="font-mission-body text-foreground/80 italic">
-              "Don't hesitate to call or message. We're not strangers — we're brothers and sisters in Christ."
+              "Don't hesitate to call or message us. We're not strangers — we're brothers and sisters in Christ."
             </p>
           </div>
         </div>
@@ -160,7 +160,7 @@ const ContactUs = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="font-mission text-2xl md:text-3xl font-bold text-foreground mb-3">
-              Our Church Family Leaders
+              The Pillars of Our Church Family
             </h2>
             <p className="font-mission-body text-muted-foreground">
               Find someone near your area — or anyone you feel comfortable talking to
