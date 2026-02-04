@@ -1,8 +1,8 @@
 import { TreeLogo } from "@/components/TreeLogo";
 import { Button } from "@/components/ui/button";
 import { MobileNav } from "@/components/MobileNav";
+import { MissionHeroMosaic } from "@/components/MissionHeroMosaic";
 import { ArrowRight, Target, Droplets, Users, GraduationCap, HandHeart, Megaphone, Home, Rocket, CheckCircle2, MessageCircle, Mail, Flame } from "lucide-react";
-import heroMissionMosaic from "@/assets/hero-mission-mosaic.jpg";
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 
@@ -163,14 +163,8 @@ export const TheMission = () => {
       {/* Hero Section */}
       <section className="pt-20 relative min-h-[70vh] flex items-center overflow-hidden">
         {/* Mosaic Background */}
-        <div className="absolute inset-0">
-          <img 
-            src={heroMissionMosaic} 
-            alt="JFCM Ministry Mosaic" 
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-primary/75" />
-        </div>
+        <MissionHeroMosaic />
+        <div className="absolute inset-0 bg-primary/75" />
         
         {/* Hero Content */}
         <div className="container mx-auto px-6 relative z-10 py-20">
