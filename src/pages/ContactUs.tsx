@@ -230,36 +230,22 @@ const ContactUs = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 bg-secondary/30">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col items-center gap-6">
-            <Link to="/" className="flex items-center gap-3">
-              <TreeLogo className="w-10 h-12" />
+      <footer className="bg-foreground text-primary-foreground py-16 px-6">
+        <div className="container mx-auto">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+            <Link to="/" className="flex items-center gap-4">
+              <TreeLogo variant="white" className="w-12 h-14" />
               <div>
-                <span className="font-mission text-lg font-bold text-foreground tracking-tight">
-                  JESUS FIRST
-                </span>
-                <span className="block text-[10px] text-muted-foreground font-mission-body tracking-widest uppercase">
-                  Christian Ministries
-                </span>
+                <p className="font-mission text-xl font-bold">Jesus First Christian Ministries</p>
+                <p className="font-mission-body text-sm text-primary-foreground/60">TO WIN · TO TRAIN · TO SEND</p>
+                <p className="font-mission-body text-xs text-primary-foreground/40 mt-1">Established 1987 · Riyadh, Saudi Arabia</p>
               </div>
             </Link>
-
-            <div className="flex flex-wrap justify-center gap-6">
+            <div className="flex items-center gap-8 font-mission-body text-sm">
               {navItems.map((item) => (
-                <Link
-                  key={item.label}
-                  to={item.path}
-                  className="font-mission-body text-sm text-muted-foreground hover:text-primary transition-colors"
-                >
-                  {item.label}
-                </Link>
+                <Link key={item.label} to={item.path} className="text-primary-foreground/60 hover:text-accent transition-colors font-medium">{item.label}</Link>
               ))}
             </div>
-
-            <p className="font-mission-body text-sm text-muted-foreground text-center">
-              © {new Date().getFullYear()} Jesus First Christian Ministries. All rights reserved.
-            </p>
           </div>
         </div>
       </footer>
