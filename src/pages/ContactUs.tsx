@@ -120,11 +120,7 @@ const ContactUs = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background" />
         
         <div className="container mx-auto px-4 text-center relative z-10">
-          <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-accent/20 backdrop-blur-sm mb-6">
-            <Heart className="w-10 h-10 text-accent" />
-          </div>
-          
-          <h1 className="font-mission text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 drop-shadow-md">
+          <h1 className="font-mission text-5xl md:text-6xl lg:text-7xl font-extrabold text-foreground mb-6 drop-shadow-md tracking-tight">
             You're Family Here
           </h1>
           
