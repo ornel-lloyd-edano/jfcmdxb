@@ -12,6 +12,7 @@ import ferdsPhoto from "@/assets/elders/ferds.jpg";
 import reyPhoto from "@/assets/elders/rey.jpg";
 import mikePhoto from "@/assets/elders/mike.jpg";
 import andreiPhoto from "@/assets/elders/andrei.jpg";
+import heroContact from "@/assets/hero-contact.png";
 
 const ContactUs = () => {
   const navItems = [
@@ -110,9 +111,16 @@ const ContactUs = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-b from-primary/5 to-background">
-        <div className="container mx-auto px-4 text-center">
-          <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary/10 mb-6">
+      <section className="relative pt-32 pb-20 md:pb-28 overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${heroContact})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background" />
+        
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary/20 backdrop-blur-sm mb-6">
             <Heart className="w-10 h-10 text-primary" />
           </div>
           
