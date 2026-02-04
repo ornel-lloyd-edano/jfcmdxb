@@ -120,23 +120,25 @@ const ContactUs = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background" />
         
         <div className="container mx-auto px-4 text-center relative z-10">
-          <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary/20 backdrop-blur-sm mb-6">
-            <Heart className="w-10 h-10 text-primary" />
-          </div>
-          
-          <h1 className="font-mission text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-            You're Family Here
-          </h1>
-          
-          <p className="font-mission-body text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-4">
-            We believe in doing life together. Whether you have questions, need prayer, 
-            or just want someone to talk to — we're here for you. Reach out to any of our elders; 
-            they'd love to hear from you.
-          </p>
-          
-          <div className="flex items-center justify-center gap-2 text-primary font-mission-body">
-            <Users className="w-5 h-5" />
-            <span className="text-sm font-medium">One family, many locations across the UAE</span>
+          <div className="max-w-2xl mx-auto bg-background/70 backdrop-blur-sm rounded-2xl p-8 md:p-10">
+            <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary/20 mb-6">
+              <Heart className="w-10 h-10 text-primary" />
+            </div>
+            
+            <h1 className="font-mission text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+              You're Family Here
+            </h1>
+            
+            <p className="font-mission-body text-lg md:text-xl text-muted-foreground leading-relaxed mb-4">
+              We believe in doing life together. Whether you have questions, need prayer, 
+              or just want someone to talk to — we're here for you. Reach out to any of our elders; 
+              they'd love to hear from you.
+            </p>
+            
+            <div className="flex items-center justify-center gap-2 text-primary font-mission-body">
+              <Users className="w-5 h-5" />
+              <span className="text-sm font-medium">One family, many locations across the UAE</span>
+            </div>
           </div>
         </div>
       </section>
