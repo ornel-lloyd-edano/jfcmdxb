@@ -167,7 +167,7 @@ const ContactUs = () => {
               >
                 {/* Background Image */}
                 <div 
-                  className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15 group-hover:opacity-20 transition-opacity"
+                  className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-35 group-hover:opacity-45 transition-opacity"
                   style={{ backgroundImage: `url(${elder.photo})` }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/95 to-background/80" />
