@@ -120,8 +120,8 @@ const ContactUs = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background" />
         
         <div className="container mx-auto px-4 text-center relative z-10">
-          <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary/20 backdrop-blur-sm mb-6">
-            <Heart className="w-10 h-10 text-primary" />
+          <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-accent/20 backdrop-blur-sm mb-6">
+            <Heart className="w-10 h-10 text-accent" />
           </div>
           
           <h1 className="font-mission text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 drop-shadow-md">
@@ -135,7 +135,7 @@ const ContactUs = () => {
               they'd love to hear from you.
             </p>
             
-            <div className="flex items-center justify-center gap-2 text-primary font-mission-body">
+            <div className="flex items-center justify-center gap-2 text-accent font-mission-body">
               <Users className="w-5 h-5" />
               <span className="text-sm font-medium">One family, many locations across the UAE</span>
             </div>
@@ -201,7 +201,7 @@ const ContactUs = () => {
 
                   {/* Title & Name */}
                   <div className="mb-4">
-                    <h3 className="font-mission text-xl font-bold text-foreground group-hover:text-primary transition-colors">
+                    <h3 className="font-mission text-xl font-bold text-foreground group-hover:text-accent transition-colors">
                       {elder.title}
                     </h3>
                     <p className="font-mission-body text-muted-foreground">
@@ -213,10 +213,10 @@ const ContactUs = () => {
                   <div className="space-y-3">
                     <a 
                       href={`tel:${elder.phone}`}
-                      className="flex items-center gap-3 text-foreground hover:text-primary transition-colors group/link"
+                      className="flex items-center gap-3 text-foreground hover:text-accent transition-colors group/link"
                     >
-                      <div className="w-10 h-10 rounded-full bg-primary/10 backdrop-blur-sm flex items-center justify-center group-hover/link:bg-primary/20 transition-colors">
-                        <Phone className="w-4 h-4 text-primary" />
+                      <div className="w-10 h-10 rounded-full bg-accent/10 backdrop-blur-sm flex items-center justify-center group-hover/link:bg-accent/20 transition-colors">
+                        <Phone className="w-4 h-4 text-accent" />
                       </div>
                       <span className="font-mission-body font-medium">{elder.phone}</span>
                     </a>
