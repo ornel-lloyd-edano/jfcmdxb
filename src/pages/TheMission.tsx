@@ -1,7 +1,8 @@
 import { TreeLogo } from "@/components/TreeLogo";
 import { Button } from "@/components/ui/button";
 import { MobileNav } from "@/components/MobileNav";
-import { ArrowRight, Target, Droplets, Users, GraduationCap, HandHeart, Megaphone, Home, Rocket, CheckCircle2, MessageCircle, Mail, Phone, Flame } from "lucide-react";
+import { ArrowRight, Target, Droplets, Users, GraduationCap, HandHeart, Megaphone, Home, Rocket, CheckCircle2, MessageCircle, Mail, Flame } from "lucide-react";
+import heroMissionMosaic from "@/assets/hero-mission-mosaic.jpg";
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 
@@ -161,12 +162,14 @@ export const TheMission = () => {
 
       {/* Hero Section */}
       <section className="pt-20 relative min-h-[70vh] flex items-center overflow-hidden">
-        {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/90 to-primary/80">
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-accent rounded-full blur-3xl animate-pulse" />
-            <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }} />
-          </div>
+        {/* Mosaic Background */}
+        <div className="absolute inset-0">
+          <img 
+            src={heroMissionMosaic} 
+            alt="JFCM Ministry Mosaic" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-primary/75" />
         </div>
         
         {/* Hero Content */}
