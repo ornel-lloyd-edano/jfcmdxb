@@ -237,7 +237,7 @@ const ContactUs = () => {
                     className="mt-6 block"
                   >
                     <Button 
-                      variant={elder.isPastor ? "mission" : "missionOutline"} 
+                      variant="mission" 
                       className="w-full"
                     >
                       <MessageCircle className="w-4 h-4 mr-2" />
