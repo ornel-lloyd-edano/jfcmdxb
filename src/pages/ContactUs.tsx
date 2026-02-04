@@ -128,7 +128,7 @@ const ContactUs = () => {
             You're Family Here
           </h1>
           
-          <div className="max-w-2xl mx-auto bg-background/60 backdrop-blur-sm rounded-xl p-6">
+          <div className="max-w-2xl mx-auto bg-background/40 backdrop-blur-sm rounded-xl p-6">
             <p className="font-mission-body text-lg md:text-xl text-muted-foreground leading-relaxed mb-4">
               We believe in doing life together. Whether you have questions, need prayer, 
               or just want someone to talk to — we're here for you. Reach out to any of our elders; 
