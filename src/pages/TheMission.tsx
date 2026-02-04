@@ -43,13 +43,20 @@ export const TheMission = () => {
       missions: [
         {
           number: 1,
+          title: "Believe and accept the Gospel",
+          icon: Target,
+          verse: "For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.",
+          reference: "John 3:16"
+        },
+        {
+          number: 2,
           title: "Attend weekly worship service and Bible study gatherings",
           icon: Users,
           verse: "And let us consider how we may spur one another on toward love and good deeds, not giving up meeting together, as some are in the habit of doing...",
           reference: "Hebrews 10:24–25"
         },
         {
-          number: 2,
+          number: 3,
           title: "Be water baptized",
           icon: Droplets,
           verse: "Whoever believes and is baptized will be saved…",
@@ -63,18 +70,25 @@ export const TheMission = () => {
       color: "bg-blue-600",
       missions: [
         {
-          number: 3,
+          number: 4,
           title: "Choose your ministry",
           icon: Target,
           verse: "There are different kinds of service, but the same Lord… Now to each one the manifestation of the Spirit is given for the common good.",
           reference: "1 Corinthians 12:5–7"
         },
         {
-          number: 4,
+          number: 5,
           title: "Complete the School of Workers training",
           icon: GraduationCap,
           verse: "Do your best to present yourself to God as one approved, a worker who does not need to be ashamed and who correctly handles the word of truth.",
           reference: "2 Timothy 2:15"
+        },
+        {
+          number: 6,
+          title: "Serve in the ministry",
+          icon: HandHeart,
+          verse: "Each of you should use whatever gift you have received to serve others, as faithful stewards of God's grace.",
+          reference: "1 Peter 4:10"
         }
       ]
     },
@@ -84,15 +98,15 @@ export const TheMission = () => {
       color: "bg-primary",
       missions: [
         {
-          number: 5,
-          title: "Serve in the ministry",
-          icon: HandHeart,
-          verse: "Each of you should use whatever gift you have received to serve others, as faithful stewards of God's grace.",
-          reference: "1 Peter 4:10"
+          number: 7,
+          title: "Be baptized in the Spirit",
+          icon: Flame,
+          verse: "Do not leave Jerusalem, but wait for the gift my Father promised… For John baptized with water, but in a few days you will be baptized with the Holy Spirit… You will receive power when the Holy Spirit comes on you; and you will be my witnesses.",
+          reference: "Acts 1:4–5, 8"
         },
         {
-          number: 6,
-          title: "Evangelize and invite",
+          number: 8,
+          title: "Go to the world and win disciples for Christ",
           icon: Megaphone,
           verse: "Therefore go and make disciples of all nations…",
           reference: "Matthew 28:19–20"
@@ -102,12 +116,6 @@ export const TheMission = () => {
   ];
 
   const bonusMissions = [
-    {
-      title: "Be baptized in the Spirit",
-      icon: Flame,
-      verse: "Do not leave Jerusalem, but wait for the gift my Father promised… For John baptized with water, but in a few days you will be baptized with the Holy Spirit… You will receive power when the Holy Spirit comes on you; and you will be my witnesses.",
-      reference: "Acts 1:4–5, 8"
-    },
     {
       title: "Plant house churches",
       icon: Home,
@@ -185,7 +193,7 @@ export const TheMission = () => {
             </h1>
             
             <p className="font-mission-body text-xl md:text-2xl text-primary-foreground/90 max-w-2xl mx-auto leading-relaxed">
-              Six steps to grow in faith, serve with purpose, and fulfill the Great Commission. Are you ready?
+              Seven steps to grow in faith, serve with purpose, and fulfill the Great Commission. Are you ready?
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
