@@ -142,7 +142,7 @@ const ContactUs = () => {
       {/* Warm Message */}
       <section className="py-8 bg-primary">
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-center gap-4 text-center">
+          <div className="flex items-center justify-center gap-4 text-center animate-fade-up">
             <MessageCircle className="w-6 h-6 text-primary-foreground flex-shrink-0" />
             <p className="font-mission-body text-primary-foreground/90 italic">
               "Don't hesitate to call or message us. We're not strangers — we're brothers and sisters in Christ."
@@ -154,7 +154,7 @@ const ContactUs = () => {
       {/* Elders Grid */}
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12 animate-fade-up">
             <h2 className="font-mission text-2xl md:text-3xl font-bold text-foreground mb-3">
               The Pillars of Our Church Family
             </h2>
@@ -163,7 +163,7 @@ const ContactUs = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto animate-fade-up">
             {elders.map((elder, index) => (
               <Card 
                 key={index} 
@@ -249,7 +249,7 @@ const ContactUs = () => {
 
       {/* Encouragement Section */}
       <section className="py-16 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4 text-center">
+        <div className="container mx-auto px-4 text-center animate-fade-up">
           <h2 className="font-mission text-2xl md:text-3xl font-bold mb-4">
             No Question Is Too Small
           </h2>
