@@ -161,16 +161,23 @@ const ContactUs = () => {
             {elders.map((elder, index) => (
               <Card 
                 key={index} 
-                className={`group hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/30 ${
-                  elder.isPastor ? 'bg-primary/5 border-primary/20' : 'bg-card'
+                className={`group hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/30 overflow-hidden relative ${
+                  elder.isPastor ? 'border-primary/20' : ''
                 }`}
               >
-                <CardContent className="p-6">
+                {/* Background Image */}
+                <div 
+                  className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15 group-hover:opacity-20 transition-opacity"
+                  style={{ backgroundImage: `url(${elder.photo})` }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/95 to-background/80" />
+                
+                <CardContent className="p-6 relative z-10">
                   {/* Avatar Photo */}
-                  <Avatar className={`w-20 h-20 mb-4 ring-4 ${
+                  <Avatar className={`w-20 h-20 mb-4 ring-4 shadow-lg ${
                     elder.isPastor 
-                      ? 'ring-primary/30' 
-                      : 'ring-secondary/30'
+                      ? 'ring-primary/40' 
+                      : 'ring-secondary/40'
                   }`}>
                     <AvatarImage src={elder.photo} alt={elder.name} className="object-cover" />
                     <AvatarFallback className={`text-2xl font-bold ${
@@ -198,14 +205,14 @@ const ContactUs = () => {
                       href={`tel:${elder.phone}`}
                       className="flex items-center gap-3 text-foreground hover:text-primary transition-colors group/link"
                     >
-                      <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center group-hover/link:bg-primary/20 transition-colors">
+                      <div className="w-10 h-10 rounded-full bg-primary/10 backdrop-blur-sm flex items-center justify-center group-hover/link:bg-primary/20 transition-colors">
                         <Phone className="w-4 h-4 text-primary" />
                       </div>
                       <span className="font-mission-body font-medium">{elder.phone}</span>
                     </a>
 
                     <div className="flex items-start gap-3 text-muted-foreground">
-                      <div className="w-10 h-10 rounded-full bg-secondary/50 flex items-center justify-center flex-shrink-0">
+                      <div className="w-10 h-10 rounded-full bg-secondary/50 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
                         <MapPin className="w-4 h-4 text-muted-foreground" />
                       </div>
                       <span className="font-mission-body text-sm pt-2">{elder.areas}</span>
