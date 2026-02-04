@@ -128,15 +128,17 @@ const ContactUs = () => {
             You're Family Here
           </h1>
           
-          <p className="font-mission-body text-lg md:text-xl text-foreground/90 max-w-2xl mx-auto leading-relaxed mb-4 drop-shadow-sm [text-shadow:_0_1px_8px_rgb(255_255_255_/_80%)]">
-            We believe in doing life together. Whether you have questions, need prayer, 
-            or just want someone to talk to — we're here for you. Reach out to any of our elders; 
-            they'd love to hear from you.
-          </p>
-          
-          <div className="flex items-center justify-center gap-2 text-primary font-mission-body drop-shadow-sm">
-            <Users className="w-5 h-5" />
-            <span className="text-sm font-medium">One family, many locations across the UAE</span>
+          <div className="max-w-2xl mx-auto bg-background/60 backdrop-blur-sm rounded-xl p-6">
+            <p className="font-mission-body text-lg md:text-xl text-muted-foreground leading-relaxed mb-4">
+              We believe in doing life together. Whether you have questions, need prayer, 
+              or just want someone to talk to — we're here for you. Reach out to any of our elders; 
+              they'd love to hear from you.
+            </p>
+            
+            <div className="flex items-center justify-center gap-2 text-primary font-mission-body">
+              <Users className="w-5 h-5" />
+              <span className="text-sm font-medium">One family, many locations across the UAE</span>
+            </div>
           </div>
         </div>
       </section>
