@@ -124,7 +124,7 @@ const ContactUs = () => {
             We are <span className="text-primary">Family</span> Here
           </h1>
           
-          <div className="max-w-2xl mx-auto bg-white/40 backdrop-blur-lg rounded-xl p-6 border border-white/30 shadow-xl">
+          <div className="max-w-2xl mx-auto bg-background/30 backdrop-blur-2xl backdrop-saturate-150 backdrop-contrast-125 rounded-xl p-6 border border-border/60 shadow-xl ring-1 ring-border/40">
             <p className="font-mission-body text-lg md:text-xl text-muted-foreground leading-relaxed mb-4">
               We believe in doing life together. Whether you have questions, need prayer, 
               or just want someone to talk to — we're here for you. Reach out to any of our elders; 
