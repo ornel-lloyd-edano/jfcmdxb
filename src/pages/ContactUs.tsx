@@ -121,7 +121,7 @@ const ContactUs = () => {
         
         <div className="container mx-auto px-4 text-center relative z-10">
           <h1 className="font-mission text-5xl md:text-6xl lg:text-7xl font-extrabold text-foreground mb-6 drop-shadow-md tracking-tight">
-            You're Family Here
+            We are <span className="text-primary">Family</span> Here
           </h1>
           
           <div className="max-w-2xl mx-auto bg-background/40 backdrop-blur-sm rounded-xl p-6">
