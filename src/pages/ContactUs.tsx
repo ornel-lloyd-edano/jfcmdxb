@@ -1,0 +1,270 @@
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { TreeLogo } from "@/components/TreeLogo";
+import { MobileNav } from "@/components/MobileNav";
+import { Phone, MapPin, Heart, Users, MessageCircle } from "lucide-react";
+
+const ContactUs = () => {
+  const navItems = [
+    { label: "Home", path: "/" },
+    { label: "About Us", path: "/about" },
+    { label: "The Mission", path: "/mission" },
+    { label: "Contact Us", path: "/contact" },
+  ];
+
+  const elders = [
+    {
+      title: "Pastor Alex",
+      name: "Alex Talaña",
+      phone: "0569552399",
+      areas: "Muraqqabat",
+      isPastor: true,
+    },
+    {
+      title: "Elder Noel",
+      name: "Noel Junto",
+      phone: "0522609637",
+      areas: "Muteena / Al Khail / Rashidiya / RAK",
+    },
+    {
+      title: "Elder Ferds",
+      name: "Ferdinand Abadilla",
+      phone: "0509453597",
+      areas: "Al Barsha / DIP",
+    },
+    {
+      title: "Elder Rey",
+      name: "Rey Fernandez",
+      phone: "0562230292",
+      areas: "Al Nahda / Muhaisnah",
+    },
+    {
+      title: "Elder Mike",
+      name: "Michael Mallari",
+      phone: "0501458243",
+      areas: "Karama / Bur Dubai / Satwa",
+    },
+    {
+      title: "Assistant Elder Andrei",
+      name: "Andrei Cabang",
+      phone: "0561121105",
+      areas: "RAK / Um Al Quwain",
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-background">
+      {/* Navigation */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
+        <div className="container mx-auto px-4 py-3">
+          <div className="flex items-center justify-between">
+            <Link to="/" className="flex items-center gap-3 group">
+              <TreeLogo className="w-10 h-12 transition-transform group-hover:scale-105" />
+              <div>
+                <span className="font-mission text-lg font-bold text-foreground tracking-tight">
+                  JESUS FIRST
+                </span>
+                <span className="block text-[10px] text-muted-foreground font-mission-body tracking-widest uppercase">
+                  Christian Ministries
+                </span>
+              </div>
+            </Link>
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center gap-8">
+              {navItems.map((item) => (
+                <Link
+                  key={item.label}
+                  to={item.path}
+                  className="font-mission-body text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                >
+                  {item.label}
+                </Link>
+              ))}
+              <Link to="/mission#join-form">
+                <Button variant="mission" size="sm">
+                  Join the Mission
+                </Button>
+              </Link>
+            </div>
+
+            {/* Mobile Navigation */}
+            <MobileNav navItems={navItems} />
+          </div>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <section className="pt-32 pb-16 bg-gradient-to-b from-primary/5 to-background">
+        <div className="container mx-auto px-4 text-center">
+          <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary/10 mb-6">
+            <Heart className="w-10 h-10 text-primary" />
+          </div>
+          
+          <h1 className="font-mission text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+            You're Family Here
+          </h1>
+          
+          <p className="font-mission-body text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-4">
+            We believe in doing life together. Whether you have questions, need prayer, 
+            or just want someone to talk to — we're here for you. Reach out to any of our elders; 
+            they'd love to hear from you.
+          </p>
+          
+          <div className="flex items-center justify-center gap-2 text-primary font-mission-body">
+            <Users className="w-5 h-5" />
+            <span className="text-sm font-medium">One family, many locations across the UAE</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Warm Message */}
+      <section className="py-8 bg-accent/30">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-center gap-4 text-center">
+            <MessageCircle className="w-6 h-6 text-primary flex-shrink-0" />
+            <p className="font-mission-body text-foreground/80 italic">
+              "Don't hesitate to call or message. We're not strangers — we're brothers and sisters in Christ."
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Elders Grid */}
+      <section className="py-16 md:py-24">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="font-mission text-2xl md:text-3xl font-bold text-foreground mb-3">
+              Our Church Family Leaders
+            </h2>
+            <p className="font-mission-body text-muted-foreground">
+              Find someone near your area — or anyone you feel comfortable talking to
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {elders.map((elder, index) => (
+              <Card 
+                key={index} 
+                className={`group hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/30 ${
+                  elder.isPastor ? 'bg-primary/5 border-primary/20' : 'bg-card'
+                }`}
+              >
+                <CardContent className="p-6">
+                  {/* Avatar Circle */}
+                  <div className={`w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mb-4 ${
+                    elder.isPastor 
+                      ? 'bg-primary text-primary-foreground' 
+                      : 'bg-secondary text-secondary-foreground'
+                  }`}>
+                    {elder.name.split(' ').map(n => n[0]).join('')}
+                  </div>
+
+                  {/* Title & Name */}
+                  <div className="mb-4">
+                    <h3 className="font-mission text-xl font-bold text-foreground group-hover:text-primary transition-colors">
+                      {elder.title}
+                    </h3>
+                    <p className="font-mission-body text-muted-foreground">
+                      {elder.name}
+                    </p>
+                  </div>
+
+                  {/* Contact Info */}
+                  <div className="space-y-3">
+                    <a 
+                      href={`tel:${elder.phone}`}
+                      className="flex items-center gap-3 text-foreground hover:text-primary transition-colors group/link"
+                    >
+                      <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center group-hover/link:bg-primary/20 transition-colors">
+                        <Phone className="w-4 h-4 text-primary" />
+                      </div>
+                      <span className="font-mission-body font-medium">{elder.phone}</span>
+                    </a>
+
+                    <div className="flex items-start gap-3 text-muted-foreground">
+                      <div className="w-10 h-10 rounded-full bg-secondary/50 flex items-center justify-center flex-shrink-0">
+                        <MapPin className="w-4 h-4 text-muted-foreground" />
+                      </div>
+                      <span className="font-mission-body text-sm pt-2">{elder.areas}</span>
+                    </div>
+                  </div>
+
+                  {/* WhatsApp Button */}
+                  <a
+                    href={`https://wa.me/971${elder.phone.slice(1)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-6 block"
+                  >
+                    <Button 
+                      variant={elder.isPastor ? "mission" : "missionOutline"} 
+                      className="w-full"
+                    >
+                      <MessageCircle className="w-4 h-4 mr-2" />
+                      Message on WhatsApp
+                    </Button>
+                  </a>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Encouragement Section */}
+      <section className="py-16 bg-primary text-primary-foreground">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="font-mission text-2xl md:text-3xl font-bold mb-4">
+            No Question Is Too Small
+          </h2>
+          <p className="font-mission-body text-primary-foreground/90 max-w-2xl mx-auto text-lg leading-relaxed mb-6">
+            Whether you're new to faith, going through a tough time, or just want to know 
+            more about our church — reach out. We're here to walk with you, not judge you.
+          </p>
+          <p className="font-mission-body text-primary-foreground/70 italic">
+            "Therefore encourage one another and build each other up." — 1 Thessalonians 5:11
+          </p>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="py-12 bg-secondary/30">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col items-center gap-6">
+            <Link to="/" className="flex items-center gap-3">
+              <TreeLogo className="w-10 h-12" />
+              <div>
+                <span className="font-mission text-lg font-bold text-foreground tracking-tight">
+                  JESUS FIRST
+                </span>
+                <span className="block text-[10px] text-muted-foreground font-mission-body tracking-widest uppercase">
+                  Christian Ministries
+                </span>
+              </div>
+            </Link>
+
+            <div className="flex flex-wrap justify-center gap-6">
+              {navItems.map((item) => (
+                <Link
+                  key={item.label}
+                  to={item.path}
+                  className="font-mission-body text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+
+            <p className="font-mission-body text-sm text-muted-foreground text-center">
+              © {new Date().getFullYear()} Jesus First Christian Ministries. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default ContactUs;
